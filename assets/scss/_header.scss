@@ -1,0 +1,107 @@
+/* _header.scss */
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $primary-black;
+  padding: 1.2vw 4vw;  /* 패딩을 vw 단위로 수정 */
+
+  .logo-container {
+    display: flex;
+    flex-direction: column; /* 로고와 텍스트를 위아래로 정렬 */
+    align-items: center;    /* 로고와 텍스트를 수평으로 가운데 정렬 */
+
+    .logo {
+      height: 4.5vw;  /* 로고의 높이를 vw로 변경 */
+      margin-bottom: 0.1vw; /* 로고와 텍스트 사이의 간격을 vw로 변경 */
+    }
+
+    .logo-text {
+      color: $primary-red;
+      font-size: 1vw;  /* 텍스트 크기를 vw 단위로 변경 */
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .nav-menu {
+    ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-right: 2.5vw;  /* 메뉴 항목 간 간격을 vw로 변경 */
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .nav-link {
+          color: $primary-white;
+          text-decoration: none;
+          /*font-weight: bold;*/
+          position: relative;
+          font-size: 1.5vw;  /* 메뉴 글씨 크기를 vw로 변경 */
+
+          &.active {
+            color: $primary-red;
+            border-bottom: 0.2vw solid $primary-red;  /* border 크기를 vw로 변경 */
+          }
+
+          &:hover {
+            color: $primary-red;
+            border-bottom: 0.2vw solid $primary-red;  /* hover 시에도 vw로 변경 */
+          }
+        }
+      }
+    }
+  }
+
+  .social-buttons {
+    display: flex;
+    align-items: center;
+
+    .btn-signin {
+      background-color: $primary-red;
+      color: $primary-white;
+      padding: 0.3vw 1.2vw;  /* 버튼 패딩을 vw로 변경 */
+      text-decoration: none;
+      /*font-weight: bold;*/
+      font-size: 1.5vw;
+      margin-right: 1vw;
+      border-radius: 14vw;  /* 버튼의 모서리 둥근 정도를 vw로 변경 */
+
+      &:hover {
+        background-color: lighten($primary-red, 10%);
+      }
+    }
+
+    .social-btn {
+      display: inline-block;
+      margin-right: 1vw;
+      width: 2.5vw;  /* 아이콘 크기를 vw로 변경 */
+      height: 2.5vw;  /* 아이콘 크기를 vw로 변경 */
+      background-color: $primary-red;
+      border-radius: 50%;  /* 원형으로 만들기 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 1.4vw;  /* 아이콘 크기를 vw로 변경 */
+        width: 1.4vw;
+      }
+
+      &:hover {
+        background-color: lighten($primary-red, 10%);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

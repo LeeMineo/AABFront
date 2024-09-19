@@ -1,0 +1,152 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Academic M54";
+  src: url("../fonts/AcademicM54.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* _header.scss */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #010101;
+  padding: 1.2vw 4vw; /* 패딩을 vw 단위로 수정 */
+}
+.main-header .logo-container {
+  display: flex;
+  flex-direction: column; /* 로고와 텍스트를 위아래로 정렬 */
+  align-items: center; /* 로고와 텍스트를 수평으로 가운데 정렬 */
+}
+.main-header .logo-container .logo {
+  height: 4.5vw; /* 로고의 높이를 vw로 변경 */
+  margin-bottom: 0.1vw; /* 로고와 텍스트 사이의 간격을 vw로 변경 */
+}
+.main-header .logo-container .logo-text {
+  color: #EF283D;
+  font-size: 1vw; /* 텍스트 크기를 vw 단위로 변경 */
+  font-weight: bold;
+  text-align: center;
+}
+.main-header .nav-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-header .nav-menu ul li {
+  margin-right: 2.5vw; /* 메뉴 항목 간 간격을 vw로 변경 */
+}
+.main-header .nav-menu ul li:last-child {
+  margin-right: 0;
+}
+.main-header .nav-menu ul li .nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  /*font-weight: bold;*/
+  position: relative;
+  font-size: 1.5vw; /* 메뉴 글씨 크기를 vw로 변경 */
+}
+.main-header .nav-menu ul li .nav-link.active {
+  color: #EF283D;
+  border-bottom: 0.2vw solid #EF283D; /* border 크기를 vw로 변경 */
+}
+.main-header .nav-menu ul li .nav-link:hover {
+  color: #EF283D;
+  border-bottom: 0.2vw solid #EF283D; /* hover 시에도 vw로 변경 */
+}
+.main-header .social-buttons {
+  display: flex;
+  align-items: center;
+}
+.main-header .social-buttons .btn-signin {
+  background-color: #EF283D;
+  color: #FFFFFF;
+  padding: 0.3vw 1.2vw; /* 버튼 패딩을 vw로 변경 */
+  text-decoration: none;
+  /*font-weight: bold;*/
+  font-size: 1.5vw;
+  margin-right: 1vw;
+  border-radius: 14vw; /* 버튼의 모서리 둥근 정도를 vw로 변경 */
+}
+.main-header .social-buttons .btn-signin:hover {
+  background-color: #f35768;
+}
+.main-header .social-buttons .social-btn {
+  display: inline-block;
+  margin-right: 1vw;
+  width: 2.5vw; /* 아이콘 크기를 vw로 변경 */
+  height: 2.5vw; /* 아이콘 크기를 vw로 변경 */
+  background-color: #EF283D;
+  border-radius: 50%; /* 원형으로 만들기 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-header .social-buttons .social-btn img {
+  height: 1.4vw; /* 아이콘 크기를 vw로 변경 */
+  width: 1.4vw;
+}
+.main-header .social-buttons .social-btn:hover {
+  background-color: #f35768;
+}
+.main-header .social-buttons .social-btn:last-child {
+  margin-right: 0;
+}
+
+/* _tournaments.scss */
+.tournament-info {
+  padding: 2vw;
+  text-align: center;
+}
+.tournament-info h1 {
+  font-size: 2vw;
+  margin-bottom: 2vw;
+  color: #EF283D;
+}
+.tournament-info p {
+  font-size: 1.2vw;
+  color: #010101;
+}
+.tournament-info .tournament-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  margin-top: 2vw;
+}
+.tournament-info .tournament-list .tournament-item {
+  background-color: #EDE2CE;
+  padding: 2vw;
+  border-radius: 1vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.tournament-info .tournament-list .tournament-item h2 {
+  font-size: 1.5vw;
+  color: #010101;
+}
+.tournament-info .tournament-list .tournament-item p {
+  font-size: 1.2vw;
+  margin: 0.5vw 0;
+}
+.tournament-info .tournament-list .tournament-item .btn-register {
+  display: inline-block;
+  margin-top: 1vw;
+  padding: 0.8vw 1.6vw;
+  background-color: #EF283D;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.5vw;
+}
+.tournament-info .tournament-list .tournament-item .btn-register:hover {
+  background-color: #f35768;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=styles.css.map */

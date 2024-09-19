@@ -1,0 +1,58 @@
+/* _tournaments.scss */
+
+.tournament-info {
+    padding: 2vw;
+    text-align: center;
+  
+    h1 {
+      font-size: 2vw;
+      margin-bottom: 2vw;
+      color: $primary-red;
+    }
+  
+    p {
+      font-size: 1.2vw;
+      color: $primary-black;
+    }
+  
+    .tournament-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+      margin-top: 2vw;
+  
+      .tournament-item {
+        background-color: $primary-beige;
+        padding: 2vw;
+        border-radius: 1vw;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: left;
+  
+        h2 {
+          font-size: 1.5vw;
+          color: $primary-black;
+        }
+  
+        p {
+          font-size: 1.2vw;
+          margin: 0.5vw 0;
+        }
+  
+        .btn-register {
+          display: inline-block;
+          margin-top: 1vw;
+          padding: 0.8vw 1.6vw;
+          background-color: $primary-red;
+          color: $primary-white;
+          text-decoration: none;
+          font-weight: bold;
+          border-radius: 0.5vw;
+  
+          &:hover {
+            background-color: lighten($primary-red, 10%);
+          }
+        }
+      }
+    }
+  }
+  
