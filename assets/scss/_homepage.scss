@@ -1,0 +1,317 @@
+/* 섹션 1 - 동영상 */
+.home-video-section {
+    text-align: center;
+    padding: 2vw;
+    background-color: $primary-black;
+  
+    .home-video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      iframe {
+        width: 80vw;  /* 비디오의 너비를 화면 크기에 맞게 조정 */
+        height: 45vw;  /* 16:9 비율 유지 */
+        max-width: 80vw;  /* 최대 크기 제한 */
+        max-height: 50vw; /* 최대 크기 제한 */
+        border: none;
+      }
+    }
+  }
+
+/* 섹션 2 - 토너먼트 스타일 */
+.home-tournaments-section {
+    background-color: $primary-beige;
+    padding: 3vw 5vw;
+  
+    .home-section-title {
+      text-align: center;
+      font-size: 2vw;
+      color: $primary-black;
+      margin-bottom: 2vw;
+      background-color: $primary-black;
+      color: $primary-white;
+      padding: 1vw;
+      text-transform: uppercase;
+    }
+  
+    .home-tournament-item {
+      display: flex;
+      align-items: center;
+      background-color: $primary-white;
+      padding: 2vw;
+      margin-bottom: 2vw;
+      box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+      
+      &.home-upcoming {
+        border-left: 5px solid $primary-red;
+      }
+  
+      &.home-previous {
+        border-left: 5px solid $primary-yellow;
+      }
+  
+      .home-tournament-logo {
+        width: 15vw;
+        margin-right: 2vw;
+      }
+  
+      .home-tournament-details {
+        h3 {
+          font-size: 1.5vw;
+          margin-bottom: 1vw;
+        }
+  
+        .home-tournament-name {
+          font-size: 2vw;
+          color: $primary-red;
+          font-weight: bold;
+        }
+  
+        .home-tournament-location {
+          font-size: 1.2vw;
+          color: $primary-black;
+        }
+      }
+    }
+  
+    .home-tournament-coming-soon {
+      background-color: $primary-lightbeige;
+      padding: 5vw;
+      text-align: center;
+      font-size: 1.8vw;
+      color: $primary-grey;
+      margin-bottom: 2vw;
+    }
+}
+
+/* 섹션 3 - 인스타그램 피드 스타일 */
+.instagram-section {
+    padding: 2vw 5vw;
+    background-color: $primary-white;
+  
+    .section-title {
+      text-align: center;
+      font-size: 2vw;
+      color: $primary-black;
+      margin-bottom: 2vw;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  
+    // 인스타그램 썸네일 그리드 설정 (3x3 고정)
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); // 항상 3개씩 표시
+      grid-gap: 2vw; // 각 썸네일 사이 간격
+      justify-items: center;
+  
+      a {
+        display: block;
+        width: 100%;
+        padding-bottom: 100%; // 정사각형 유지
+        position: relative;
+  
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; // 이미지를 잘라서 정사각형에 맞춤
+          box-shadow: 0 0.3vw 0.6vw rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease-in-out;
+  
+          &:hover {
+            transform: scale(1.05); // 마우스 호버 시 확대
+          }
+        }
+      }
+    }
+  }
+  
+
+/* 섹션 4 - 뉴스 카드 섹션 스타일 */
+.news-section {
+  padding: 2vw 10vw;
+  padding-bottom: 8vw;
+  background-color: #010101;
+  
+  .section-title {
+    text-align: center;
+    font-size: 6vw;
+    color: #FFFFFF;
+    margin-bottom: 3vw;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .carousel a {
+    color: $primary-black; /* 기본 링크 색상을 검정으로 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+  }
+  
+  .carousel a:visited {
+    color: $primary-black; /* 방문 후에도 링크 색상을 검정으로 유지 */
+    text-decoration: none;
+  }
+  
+  .carousel a:hover {
+    color: $primary-black; /* 마우스를 올렸을 때도 링크 색상을 검정으로 유지 */
+    text-decoration: none; /* 필요에 따라 밑줄 추가 가능 */
+  }
+  
+  .carousel a:active {
+    color: $primary-black; /* 클릭 시에도 검정색 유지 */
+    text-decoration: none;
+  }
+  
+  .news-card {
+    min-width: 33.33%; /* 한 번에 3개씩 보이도록 설정 */
+    box-sizing: border-box;
+    padding: 0 1vw;
+  }
+
+  .news-card-p {
+    background-color: $primary-white;
+    width: 100%;
+    height: 12vw;
+  }
+
+  .news-card img {
+    width: 100%;
+    height: 20vw;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin to eliminate the gap */
+    display: block;
+  }
+    
+  .news-card h3 {
+    font-size: 1.3vw;
+    margin: 0;
+    padding: 1vw;
+    padding-bottom: 0;
+    text-align:left;
+    color: $primary-black; /* 기본 링크 색상을 검정으로 설정 */
+    text-decoration: none; /* 밑줄 제거 (필요 시) */
+  }
+    
+  .news-card p {
+    font-size: 1vw;
+    padding: 1vw;
+    text-align: left;
+    color: $primary-black; /* 기본 링크 색상을 검정으로 설정 */
+    text-decoration: none; /* 밑줄 제거 (필요 시) */
+  }
+  
+  .news-card h3:visited {
+    color: $primary-black; /* 방문 후에도 링크 색상을 검정으로 유지 */
+    text-decoration: none;
+  }
+  
+  .news-card h3:hover {
+    color: $primary-black; /* 마우스를 올렸을 때도 링크 색상을 검정으로 유지 */
+    text-decoration: underline; /* 원한다면 호버 시 밑줄 추가 */
+    text-decoration: none;
+  }
+  
+  .news-card h3:active {
+    color: $primary-black; /* 클릭 시에도 검정색 유지 */
+    text-decoration: none;
+  }
+
+  .news-card p:visited {
+    color: $primary-black; /* 방문 후에도 링크 색상을 검정으로 유지 */
+    text-decoration: none;
+  }
+  
+  .news-card p:hover {
+    color: $primary-black; /* 마우스를 올렸을 때도 링크 색상을 검정으로 유지 */
+    text-decoration: underline; /* 원한다면 호버 시 밑줄 추가 */
+    text-decoration: none;
+  }
+  
+  .news-card p:active {
+    color: $primary-black; /* 클릭 시에도 검정색 유지 */
+    text-decoration: none;
+  }
+
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $primary-red;
+    color: #FFFFFF;
+    border: none;
+    padding: 1vw;
+    font-size: 2vw;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+  }
+  
+  .prev-btn {
+    left: -4vw;
+  }
+  
+  .next-btn {
+    right: -4vw;
+  }
+  
+}
+
+
+/* 섹션 5 - Pickleball 배너 섹션 스타일 */
+.pickleball-banner-section {
+  background-image: url('../../assets/images/Pickleball_banner.jpg'); /* 배경 이미지 */
+  background-size: cover;
+  background-position: center;
+  height: 60vh; /* 섹션 높이 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .banner-content {
+    text-align: center;
+    color: #FFFFFF; /* 텍스트 색상 */
+    text-transform: uppercase; /* 대문자로 변환 */
+    font-weight: bold;
+
+    h2 {
+      font-size: 4vw; /* 글씨 크기 */
+      font-weight: 200;
+      margin-bottom: 3.5vw;
+      line-height: 1.5; /* 줄 간격 설정 */
+      max-width: 100%; /* 텍스트 너비 제한 */
+    }
+
+    .banner-button {
+      background-color: #EF283D; /* 버튼 배경색 */
+      color: #FFFFFF;
+      padding: 0.6vw 3vw;
+      border-radius: 50px; /* 둥근 모서리 */
+      font-size: 2vw;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken(#EF283D, 10%);
+      }
+    }
+  }
+}

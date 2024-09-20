@@ -94,6 +94,89 @@
   margin-right: 0;
 }
 
+.main-footer {
+  background-color: #010101;
+  padding: 2vw 3.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main-footer .footer-content {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.main-footer .footer-logo-container {
+  display: flex;
+  flex-direction: column; /* 로고와 텍스트를 위아래로 정렬 */
+  align-items: center; /* 로고와 텍스트를 수평으로 가운데 정렬 */
+}
+.main-footer .footer-logo-container .footer-logo {
+  height: 6.5vw; /* 로고의 높이를 vw로 변경 */
+  margin-bottom: 0.1vw; /* 로고와 텍스트 사이의 간격을 vw로 변경 */
+}
+.main-footer .footer-logo-container .footer-logo-text {
+  color: #EF283D;
+  font-size: 1.5vw; /* 텍스트 크기를 vw 단위로 변경 */
+  font-weight: bold;
+  text-align: center;
+}
+.main-footer .footer-logo-social {
+  margin-top: 1vw;
+  text-align: center;
+}
+.main-footer .footer-logo-social .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5vw;
+  margin-bottom: 1vw;
+}
+.main-footer .footer-logo-social .social-icons .social-btn {
+  width: 2vw;
+  height: 2vw;
+  background-color: #EF283D;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-footer .footer-logo-social .social-icons .social-btn img {
+  width: 1vw;
+  height: 1vw;
+}
+.main-footer .footer-logo-social .social-icons .social-btn:hover {
+  background-color: #f35768;
+}
+.main-footer .footer-logo-social .btn-login {
+  background-color: #EF283D;
+  color: #FFFFFF;
+  padding: 0.3vw 2vw;
+  border-radius: 20px;
+  font-size: 1.2vw;
+  text-decoration: none;
+}
+.main-footer .footer-logo-social .btn-login:hover {
+  background-color: #f35768;
+}
+.main-footer .company-info {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  max-width: 100%;
+  gap: 3.5vw;
+}
+.main-footer .company-info p {
+  color: #FFFFFF;
+  font-size: 1vw;
+  line-height: 1.5;
+  margin-bottom: 1.5vw;
+}
+.main-footer .footer-image-container img {
+  width: 15vw;
+  border-radius: 0.5vw;
+  max-width: 100%; /* 이미지가 화면에 맞게 반응형으로 조절됩니다. */
+  height: auto; /* 원본 비율 유지 */
+}
+
 /* _tournaments.scss */
 .tournament-info {
   padding: 2vw;
@@ -141,6 +224,277 @@
 }
 .tournament-info .tournament-list .tournament-item .btn-register:hover {
   background-color: #f35768;
+}
+
+/* 섹션 1 - 동영상 */
+.home-video-section {
+  text-align: center;
+  padding: 2vw;
+  background-color: #010101;
+}
+.home-video-section .home-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-video-section .home-video-container iframe {
+  width: 80vw; /* 비디오의 너비를 화면 크기에 맞게 조정 */
+  height: 45vw; /* 16:9 비율 유지 */
+  max-width: 80vw; /* 최대 크기 제한 */
+  max-height: 50vw; /* 최대 크기 제한 */
+  border: none;
+}
+
+/* 섹션 2 - 토너먼트 스타일 */
+.home-tournaments-section {
+  background-color: #EDE2CE;
+  padding: 3vw 5vw;
+}
+.home-tournaments-section .home-section-title {
+  text-align: center;
+  font-size: 2vw;
+  color: #010101;
+  margin-bottom: 2vw;
+  background-color: #010101;
+  color: #FFFFFF;
+  padding: 1vw;
+  text-transform: uppercase;
+}
+.home-tournaments-section .home-tournament-item {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 2vw;
+  margin-bottom: 2vw;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+}
+.home-tournaments-section .home-tournament-item.home-upcoming {
+  border-left: 5px solid #EF283D;
+}
+.home-tournaments-section .home-tournament-item.home-previous {
+  border-left: 5px solid #D7DE39;
+}
+.home-tournaments-section .home-tournament-item .home-tournament-logo {
+  width: 15vw;
+  margin-right: 2vw;
+}
+.home-tournaments-section .home-tournament-item .home-tournament-details h3 {
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+.home-tournaments-section .home-tournament-item .home-tournament-details .home-tournament-name {
+  font-size: 2vw;
+  color: #EF283D;
+  font-weight: bold;
+}
+.home-tournaments-section .home-tournament-item .home-tournament-details .home-tournament-location {
+  font-size: 1.2vw;
+  color: #010101;
+}
+.home-tournaments-section .home-tournament-coming-soon {
+  background-color: #F6F2E6;
+  padding: 5vw;
+  text-align: center;
+  font-size: 1.8vw;
+  color: #7A7A74;
+  margin-bottom: 2vw;
+}
+
+/* 섹션 3 - 인스타그램 피드 스타일 */
+.instagram-section {
+  padding: 2vw 5vw;
+  background-color: #FFFFFF;
+}
+.instagram-section .section-title {
+  text-align: center;
+  font-size: 2vw;
+  color: #010101;
+  margin-bottom: 2vw;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.instagram-section .instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2vw;
+  justify-items: center;
+}
+.instagram-section .instagram-grid a {
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+}
+.instagram-section .instagram-grid a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0.3vw 0.6vw rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.instagram-section .instagram-grid a img:hover {
+  transform: scale(1.05);
+}
+
+/* 섹션 4 - 뉴스 카드 섹션 스타일 */
+.news-section {
+  padding: 2vw 10vw;
+  padding-bottom: 8vw;
+  background-color: #010101;
+}
+.news-section .section-title {
+  text-align: center;
+  font-size: 6vw;
+  color: #FFFFFF;
+  margin-bottom: 3vw;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.news-section .carousel-container {
+  position: relative;
+  width: 100%;
+}
+.news-section .carousel {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+}
+.news-section .carousel a {
+  color: #010101; /* 기본 링크 색상을 검정으로 설정 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+.news-section .carousel a:visited {
+  color: #010101; /* 방문 후에도 링크 색상을 검정으로 유지 */
+  text-decoration: none;
+}
+.news-section .carousel a:hover {
+  color: #010101; /* 마우스를 올렸을 때도 링크 색상을 검정으로 유지 */
+  text-decoration: none; /* 필요에 따라 밑줄 추가 가능 */
+}
+.news-section .carousel a:active {
+  color: #010101; /* 클릭 시에도 검정색 유지 */
+  text-decoration: none;
+}
+.news-section .news-card {
+  min-width: 33.33%; /* 한 번에 3개씩 보이도록 설정 */
+  box-sizing: border-box;
+  padding: 0 1vw;
+}
+.news-section .news-card-p {
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 12vw;
+}
+.news-section .news-card img {
+  width: 100%;
+  height: 20vw;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin to eliminate the gap */
+  display: block;
+}
+.news-section .news-card h3 {
+  font-size: 1.3vw;
+  margin: 0;
+  padding: 1vw;
+  padding-bottom: 0;
+  text-align: left;
+  color: #010101; /* 기본 링크 색상을 검정으로 설정 */
+  text-decoration: none; /* 밑줄 제거 (필요 시) */
+}
+.news-section .news-card p {
+  font-size: 1vw;
+  padding: 1vw;
+  text-align: left;
+  color: #010101; /* 기본 링크 색상을 검정으로 설정 */
+  text-decoration: none; /* 밑줄 제거 (필요 시) */
+}
+.news-section .news-card h3:visited {
+  color: #010101; /* 방문 후에도 링크 색상을 검정으로 유지 */
+  text-decoration: none;
+}
+.news-section .news-card h3:hover {
+  color: #010101; /* 마우스를 올렸을 때도 링크 색상을 검정으로 유지 */
+  text-decoration: underline; /* 원한다면 호버 시 밑줄 추가 */
+  text-decoration: none;
+}
+.news-section .news-card h3:active {
+  color: #010101; /* 클릭 시에도 검정색 유지 */
+  text-decoration: none;
+}
+.news-section .news-card p:visited {
+  color: #010101; /* 방문 후에도 링크 색상을 검정으로 유지 */
+  text-decoration: none;
+}
+.news-section .news-card p:hover {
+  color: #010101; /* 마우스를 올렸을 때도 링크 색상을 검정으로 유지 */
+  text-decoration: underline; /* 원한다면 호버 시 밑줄 추가 */
+  text-decoration: none;
+}
+.news-section .news-card p:active {
+  color: #010101; /* 클릭 시에도 검정색 유지 */
+  text-decoration: none;
+}
+.news-section .prev-btn, .news-section .next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #EF283D;
+  color: #FFFFFF;
+  border: none;
+  padding: 1vw;
+  font-size: 2vw;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+.news-section .prev-btn {
+  left: -4vw;
+}
+.news-section .next-btn {
+  right: -4vw;
+}
+
+/* 섹션 5 - Pickleball 배너 섹션 스타일 */
+.pickleball-banner-section {
+  background-image: url("../../assets/images/Pickleball_banner.jpg"); /* 배경 이미지 */
+  background-size: cover;
+  background-position: center;
+  height: 60vh; /* 섹션 높이 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.pickleball-banner-section .banner-content {
+  text-align: center;
+  color: #FFFFFF; /* 텍스트 색상 */
+  text-transform: uppercase; /* 대문자로 변환 */
+  font-weight: bold;
+}
+.pickleball-banner-section .banner-content h2 {
+  font-size: 4vw; /* 글씨 크기 */
+  font-weight: 200;
+  margin-bottom: 3.5vw;
+  line-height: 1.5; /* 줄 간격 설정 */
+  max-width: 100%; /* 텍스트 너비 제한 */
+}
+.pickleball-banner-section .banner-content .banner-button {
+  background-color: #EF283D; /* 버튼 배경색 */
+  color: #FFFFFF;
+  padding: 0.6vw 3vw;
+  border-radius: 50px; /* 둥근 모서리 */
+  font-size: 2vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.pickleball-banner-section .banner-content .banner-button:hover {
+  background-color: #d41025;
 }
 
 html, body {
