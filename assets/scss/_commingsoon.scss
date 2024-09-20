@@ -2,13 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 100vh;
     background-color:$primary-lightbeige;  // 메인 배경색
     color: #FFFFFF;  // 흰색 텍스트
     text-align: center;
   
     .coming-soon-content {
         width: 60vw;
+        height: 30vw;
       padding: 5vw;
       border-radius: 1vw;
       background-color: #010101;  // 다크 배경

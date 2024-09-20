@@ -49,3 +49,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+
+//토너먼트페이지
+
+document.addEventListener('DOMContentLoaded', function () {
+  const tabLinks = document.querySelectorAll('.tab-link');
+  const tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabLinks.forEach(link => {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      // 모든 탭을 비활성화
+      tabLinks.forEach(link => link.classList.remove('active'));
+      tabPanels.forEach(panel => panel.classList.remove('active'));
+
+      // 클릭된 탭을 활성화
+      this.classList.add('active');
+      const targetPanel = document.getElementById(this.dataset.tab);
+      targetPanel.classList.add('active');
+    });
+  });
+});

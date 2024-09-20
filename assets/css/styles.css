@@ -178,53 +178,161 @@
   height: auto; /* 원본 비율 유지 */
 }
 
-/* _tournaments.scss */
-.tournament-info {
-  padding: 2vw;
-  text-align: center;
+/* 섹션 1 - 토너먼트 소개 */
+.tournament-section {
+  background-color: #010101;
+  color: #FFFFFF;
+  position: relative;
 }
-.tournament-info h1 {
+.tournament-section .tournament-logo-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.tournament-section .tournament-logo {
+  justify-content: flex-end;
+  width: 50vw;
+  padding-top: 5vw;
+  padding-right: 5vw;
+}
+.tournament-section .tournament-content {
+  bottom: 30vw;
+  left: 2vw;
+  padding: 2vw;
+  padding-top: 0;
+  margin: 0;
+}
+.tournament-section .tournament-content .tournament-info h3 {
+  margin: 0;
   font-size: 2vw;
-  margin-bottom: 2vw;
+  color: #FFFFFF;
+}
+.tournament-section .tournament-content .tournament-info h1 {
+  font-size: 5vw;
+  margin: 0;
+  font-family: "Academic M54", sans-serif;
   color: #EF283D;
 }
-.tournament-info p {
-  font-size: 1.2vw;
-  color: #010101;
-}
-.tournament-info .tournament-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2vw;
-  margin-top: 2vw;
-}
-.tournament-info .tournament-list .tournament-item {
-  background-color: #EDE2CE;
-  padding: 2vw;
-  border-radius: 1vw;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-.tournament-info .tournament-list .tournament-item h2 {
+.tournament-section .tournament-content .tournament-info p {
+  margin: 0;
   font-size: 1.5vw;
+  margin-bottom: 2vw;
+  color: #FFFFFF;
+}
+.tournament-section .tournament-content .tournament-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5vw;
+  margin-bottom: 1vw;
+}
+.tournament-section .tournament-content .tournament-buttons .btn {
+  padding: 1vw 2vw;
+  font-size: 1.2vw;
+  border-radius: 5vw;
+  text-decoration: none;
+  font-family: "Academic M54", sans-serif;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+.tournament-section .tournament-content .tournament-buttons .register-btn {
+  background-color: #EF283D;
+  color: #FFFFFF;
+}
+.tournament-section .tournament-content .tournament-buttons .register-btn:hover {
+  background-color: #D22033;
+}
+.tournament-section .tournament-content .tournament-buttons .tickets-btn {
+  background-color: #EDE2CE;
   color: #010101;
 }
-.tournament-info .tournament-list .tournament-item p {
-  font-size: 1.2vw;
-  margin: 0.5vw 0;
+.tournament-section .tournament-content .tournament-buttons .tickets-btn:hover {
+  background-color: #D3C5B1;
 }
-.tournament-info .tournament-list .tournament-item .btn-register {
+.tournament-section .tournament-content .tournament-buttons .hotel-btn {
+  background-color: transparent;
+  color: #EF283D;
+  border: 2px solid #EF283D;
+}
+.tournament-section .tournament-content .tournament-buttons .hotel-btn:hover {
+  background-color: #EF283D;
+  color: #FFFFFF;
+}
+
+/* Section 2 */
+.section-2 {
+  background-color: #F5F5F5;
+  /* Section 2 - Header */
+  /* Section 2 - Content */
+}
+.section-2 .section-2-header {
+  display: flex;
+  justify-content: center;
+  background-color: #EF283D;
+  padding: 1vw 0;
+}
+.section-2 .section-2-header .tab-link {
+  margin: 0 2vw;
+  font-size: 1.5vw;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 1vw 2vw;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.section-2 .section-2-header .tab-link:hover, .section-2 .section-2-header .tab-link.active {
+  border-bottom: 2px solid #FFFFFF;
+}
+.section-2 .tab-content {
+  padding: 2vw;
+  background-color: #EDE2CE;
+  /* Section 2 - Tab Panels */
+  /* Section 2 - 1 (Information) */
+  /* Section 2 - 2 (Gallery) */
+  /* Section 2 - 3 (Results) */
+}
+.section-2 .tab-content .tab-panel {
+  display: none;
+}
+.section-2 .tab-content .tab-panel.active {
+  display: block;
+}
+.section-2 .tab-content .details {
+  display: flex;
+  justify-content: space-around;
+  padding: 2vw 0;
+}
+.section-2 .tab-content .details .detail-item {
+  text-align: center;
+}
+.section-2 .tab-content .details .detail-item span {
+  display: block;
+  font-size: 1.2vw;
+  margin-bottom: 0.5vw;
+  color: #010101;
+}
+.section-2 .tab-content .details .detail-item p {
+  font-size: 1.5vw;
+  color: #EF283D;
+}
+.section-2 .tab-content .gallery-images .image-slider {
+  display: flex;
+  overflow: hidden;
+}
+.section-2 .tab-content .gallery-images .image-slider .slide {
+  min-width: 200px;
+  height: 200px;
+  background-color: #CCCCCC;
+  margin-right: 1vw;
+}
+.section-2 .tab-content .btn-download {
   display: inline-block;
-  margin-top: 1vw;
-  padding: 0.8vw 1.6vw;
+  padding: 1vw 2vw;
   background-color: #EF283D;
   color: #FFFFFF;
   text-decoration: none;
-  font-weight: bold;
-  border-radius: 0.5vw;
-}
-.tournament-info .tournament-list .tournament-item .btn-register:hover {
-  background-color: #f35768;
+  border-radius: 5px;
+  margin-top: 2vw;
+  font-size: 1.5vw;
 }
 
 /* 섹션 1 - 동영상 */
@@ -502,13 +610,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 100vh;
   background-color: #F6F2E6;
   color: #FFFFFF;
   text-align: center;
 }
 .comming-soon-section .coming-soon-content {
   width: 60vw;
+  height: 30vw;
   padding: 5vw;
   border-radius: 1vw;
   background-color: #010101;
@@ -565,6 +674,47 @@
     opacity: 1;
   }
 }
+.special-char {
+  font-family: "Arial", sans-serif;
+}
+
+.special-char-bold {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+
+.special-char-italic {
+  font-family: "Arial", sans-serif;
+  font-style: italic;
+}
+
+.at-symbol {
+  font-family: "Arial", sans-serif;
+}
+
+.dash-symbol {
+  font-family: "Arial", sans-serif;
+}
+
+/*
+<!-- 특수 문자 사용 가이드 -->
+
+-  -> <span class="special-char">-</span>
+@  -> <span class="special-char">@</span>
+&  -> <span class="special-char">&amp;</span>
+%  -> <span class="special-char">%</span>
+!  -> <span class="special-char">!</span>
+?  -> <span class="special-char">?</span>
+:  -> <span class="special-char">:</span>
+;  -> <span class="special-char">;</span>
+#  -> <span class="special-char">#</span>
+$  -> <span class="special-char">$</span>
+/  -> <span class="special-char">/</span>
+\  -> <span class="special-char">\</span>
+_  -> <span class="special-char">_</span>
+
+
+*/
 html, body {
   margin: 0;
   padding: 0;

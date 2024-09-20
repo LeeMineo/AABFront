@@ -1,58 +1,187 @@
-/* _tournaments.scss */
+/* 섹션 1 - 토너먼트 소개 */
+.tournament-section {
+  background-color: $primary-black;  // 배경색: 블랙
+  color: $primary-white;  // 텍스트 색상: 흰색
+  position: relative;  // Enable positioning for child elements
 
-.tournament-info {
+  .tournament-logo-section{
+    display:flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .tournament-logo {
+    justify-content: flex-end;
+    width: 50vw;
+    padding-top: 5vw;
+    padding-right: 5vw;
+  }
+  
+  .tournament-content {
+    bottom: 30vw;  // Align content to the bottom
+    left: 2vw;  // Align content to the left side
     padding: 2vw;
-    text-align: center;
-  
-    h1 {
-      font-size: 2vw;
-      margin-bottom: 2vw;
-      color: $primary-red;
+    padding-top: 0;
+    margin: 0;
+
+    .tournament-info {
+      h3 {
+        margin: 0;
+        font-size: 2vw;
+        color: $primary-white;
+      }
+
+      h1 {
+        font-size: 5vw;
+        margin: 0;
+        font-family: 'Academic M54', sans-serif;
+        color: #EF283D;  // 빨간색
+      }
+
+      p {
+        margin: 0;
+        font-size: 1.5vw;
+        margin-bottom: 2vw;
+        color: $primary-white;
+      }
     }
-  
-    p {
-      font-size: 1.2vw;
-      color: $primary-black;
-    }
-  
-    .tournament-list {
+
+    .tournament-buttons {
       display: flex;
-      flex-direction: column;
-      gap: 2vw;
-      margin-top: 2vw;
-  
-      .tournament-item {
-        background-color: $primary-beige;
-        padding: 2vw;
-        border-radius: 1vw;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: left;
-  
-        h2 {
-          font-size: 1.5vw;
-          color: $primary-black;
-        }
-  
-        p {
-          font-size: 1.2vw;
-          margin: 0.5vw 0;
-        }
-  
-        .btn-register {
-          display: inline-block;
-          margin-top: 1vw;
-          padding: 0.8vw 1.6vw;
-          background-color: $primary-red;
-          color: $primary-white;
-          text-decoration: none;
-          font-weight: bold;
-          border-radius: 0.5vw;
-  
-          &:hover {
-            background-color: lighten($primary-red, 10%);
-          }
-        }
+      justify-content: flex-start;  // Align buttons to the left side
+      gap: 1.5vw;
+      margin-bottom: 1vw;
+
+      .btn {
+        padding: 1vw 2vw;
+        font-size: 1.2vw;
+        border-radius: 5vw;
+        text-decoration: none;
+        font-family: 'Academic M54', sans-serif;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+      }
+
+      .register-btn {
+        background-color: #EF283D;  // 레드 버튼
+        color: $primary-white;
+      }
+
+      .register-btn:hover {
+        background-color: #D22033;
+      }
+
+      .tickets-btn {
+        background-color: #EDE2CE;  // 베이지 버튼
+        color: #010101;
+      }
+
+      .tickets-btn:hover {
+        background-color: #D3C5B1;
+      }
+
+      .hotel-btn {
+        background-color: transparent;  // 투명한 버튼
+        color: #EF283D;
+        border: 2px solid #EF283D;
+      }
+
+      .hotel-btn:hover {
+        background-color: #EF283D;
+        color:  $primary-white;
       }
     }
   }
-  
+}
+
+/* Section 2 */
+.section-2 {
+  background-color: #F5F5F5;
+
+  /* Section 2 - Header */
+  .section-2-header {
+    display: flex;
+    justify-content: center;
+    background-color: #EF283D;
+    padding: 1vw 0;
+
+    .tab-link {
+      margin: 0 2vw;
+      font-size: 1.5vw;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 1vw 2vw;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+
+      &:hover, &.active {
+        border-bottom: 2px solid #FFFFFF;
+      }
+    }
+  }
+
+  /* Section 2 - Content */
+  .tab-content {
+    padding: 2vw;
+    background-color: #EDE2CE;
+
+    /* Section 2 - Tab Panels */
+    .tab-panel {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    /* Section 2 - 1 (Information) */
+    .details {
+      display: flex;
+      justify-content: space-around;
+      padding: 2vw 0;
+
+      .detail-item {
+        text-align: center;
+
+        span {
+          display: block;
+          font-size: 1.2vw;
+          margin-bottom: 0.5vw;
+          color: #010101;
+        }
+
+        p {
+          font-size: 1.5vw;
+          color: #EF283D;
+        }
+      }
+    }
+
+    /* Section 2 - 2 (Gallery) */
+    .gallery-images {
+      .image-slider {
+        display: flex;
+        overflow: hidden;
+
+        .slide {
+          min-width: 200px;
+          height: 200px;
+          background-color: #CCCCCC;
+          margin-right: 1vw;
+        }
+      }
+    }
+
+    /* Section 2 - 3 (Results) */
+    .btn-download {
+      display: inline-block;
+      padding: 1vw 2vw;
+      background-color: #EF283D;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 2vw;
+      font-size: 1.5vw;
+    }
+  }
+}
