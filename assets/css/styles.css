@@ -169,6 +169,7 @@
   font-size: 1vw;
   line-height: 1.5;
   margin-bottom: 1.5vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 .main-footer .footer-image-container img {
   width: 15vw;
@@ -497,6 +498,73 @@
   background-color: #d41025;
 }
 
+.comming-soon-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #F6F2E6;
+  color: #FFFFFF;
+  text-align: center;
+}
+.comming-soon-section .coming-soon-content {
+  width: 60vw;
+  padding: 5vw;
+  border-radius: 1vw;
+  background-color: #010101;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+}
+.comming-soon-section .coming-soon-content .comming-soon-logo-container {
+  display: flex;
+  flex-direction: column; /* 로고와 텍스트를 위아래로 정렬 */
+  align-items: center;
+  animation: fadeInLogo 0.8s ease-out forwards;
+}
+.comming-soon-section .coming-soon-content .comming-soon-logo {
+  height: 10vw; /* 로고의 높이를 vw로 변경 */
+  margin-bottom: 0.1vw; /* 로고와 텍스트 사이의 간격을 vw로 변경 */
+}
+.comming-soon-section .coming-soon-content .comming-soon-logo-text {
+  color: #EF283D;
+  font-size: 2.5vw; /* 텍스트 크기를 vw 단위로 변경 */
+  text-align: center;
+}
+.comming-soon-section .coming-soon-content h2 {
+  font-size: 4vw;
+  margin-bottom: 1vw;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.8s forwards;
+}
+.comming-soon-section .coming-soon-content p {
+  font-size: 1.5vw;
+  margin-top: 1vw;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.8s forwards;
+  line-height: 1.5;
+}
+
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html, body {
   margin: 0;
   padding: 0;
