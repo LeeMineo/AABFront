@@ -1,0 +1,141 @@
+/* Modal styling */
+.login-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; /* 기본적으로 숨김 */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-modal-content {
+  background-color: $primary-red;
+  padding: 1rem;
+  width: 90%;
+  height: 550px;
+  max-width: 400px; /* 최대 너비를 400px로 고정 */
+  color: $primary-white;
+  text-align: left;
+  justify-content:flex-start;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* 그림자 추가 */
+}
+
+.login-modal-content-innerbox {
+  border: 1px solid $primary-white; /* 하얀색 테두리 추가 */
+  padding: 4rem; 
+  justify-content:flex-start;
+}
+
+h1 {
+  color: $primary-black;
+  font-size: 2.8rem; /* 반응형 제목 크기 */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+p {
+  font-size: 1rem;
+  font-family: 'Academic M54', sans-serif;
+  //font-weight: 10;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  text-align:left;
+}
+
+.login-email-input {
+  align-items: center;
+  margin-bottom: 2rem;
+
+  input {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    border: none;
+    outline: none;
+    color: #FFFFFF; /* 글자 색상을 흰색으로 설정 */
+    font-style: italic; /* 글자를 기울여서 표시 */
+    border-bottom: 1px solid #000000; /* 검은색 아래 테두리 */
+    background-color: transparent; /* 배경 투명하게 설정 */
+    padding-right: 8rem; /* 왼쪽 여백 추가 */
+
+    ::placeholder {
+      color: #000000 !important; /* Placeholder의 색상을 검정으로 설정 */
+      opacity: 1; /* 투명도 조정 */
+      font-style: italic; /* Placeholder 글자를 기울여서 표시 */
+    }
+
+    /* 웹킷 계열 브라우저에 대한 placeholder 스타일링 */
+    &::-webkit-input-placeholder {
+      color: #000000 !important; /* 검정색으로 설정 */
+      opacity: 1 !important; /* 투명도 강제 적용 */
+      font-style: italic !important; /* 글자를 기울이도록 설정 */
+    }
+
+    /* 모질라 파이어폭스 계열 브라우저에 대한 placeholder 스타일링 */
+    &::-moz-placeholder {
+      color: #000000 !important; /* 검정색으로 설정 */
+      opacity: 1 !important; /* 투명도 강제 적용 */
+      font-style: italic !important; /* 글자를 기울이도록 설정 */
+    }
+
+    /* 인터넷 익스플로러 및 엣지에 대한 placeholder 스타일링 */
+    &:-ms-input-placeholder {
+      color: #000000 !important; /* 검정색으로 설정 */
+      opacity: 1 !important; /* 투명도 강제 적용 */
+      font-style: italic !important; /* 글자를 기울이도록 설정 */
+    }
+  }
+
+  .sign-up-btn {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    .user-icon {
+      width: 1.2rem; /* 아이콘 크기 반응형으로 설정 */
+      height: 1.2rem;
+      margin-right: 1rem;
+    }
+
+    .divider {
+      width: 1px;
+      height: 1.5rem;
+      background-color: #fff;
+      margin-right: 1rem;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 1rem;
+      font-weight: inherit;
+      line-height: 1;
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}
