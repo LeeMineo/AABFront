@@ -9,7 +9,7 @@
   display: none; /* 기본적으로 숨김 */
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .login-modal-content {
@@ -23,6 +23,24 @@
   justify-content: center; /* 가로축 중앙 정렬 */
   align-items:flex-start; /* 세로축 중앙 정렬 */
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* 그림자 추가 */
+}
+
+/* 닫기 버튼 스타일 - 기본적으로 숨김 */
+.login-close-btn {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: $primary-white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ffcc00; /* 닫기 버튼 호버 시 색상 변경 */
+  }
 }
 
 
@@ -269,5 +287,131 @@ h4 {
 
   &:hover {
     background-color: #333;
+  }
+}
+
+/* 모바일 화면에서 요소를 자연스럽게 중앙에 배치하고 화면을 꽉 채우는 스타일 */
+@media only screen and (max-width: 768px) {
+  .login-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+    height: 100vh; /* 화면을 꽉 채우도록 설정 */
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .login-modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content:center; /* 요소들 간의 간격 균등 배치 */
+    align-items: center;
+    width: 90vw;
+    height: 90vh; /* 화면에 꽉 차는 느낌을 주도록 설정 */
+    max-width: 100vw;
+    padding: 5vw;
+    background-color: $primary-red;
+    box-shadow: none;
+    position: relative;
+  }
+
+  .login-modal-content-innerbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 100%; /* 전체 높이를 사용하여 요소 배치 */
+    padding: 10vw; /* 내부 패딩 */
+    padding-top: 20vw;
+    padding-bottom: 20vw;
+  }
+
+  /* 닫기 버튼을 상단 우측에 위치시키고, 모바일에서만 표시 */
+  .login-close-btn {
+    display: block;
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    background: none;
+    border: none;
+    font-size: 6vw;
+    color: $primary-white;
+    cursor: pointer;
+    z-index: 1100;
+
+    &:hover {
+      color: #ffcc00;
+    }
+  }
+
+  h1 {
+    font-size: 10vw;
+    margin-bottom: 4vw;
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  p {
+    font-size: 6vw;
+    margin-bottom: 4vw;
+    text-align: center; /* 중앙 정렬 */
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .login-email-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4vw;
+  }
+
+  .login-email-input input {
+    font-size: 4vw;
+    padding: 3vw;
+    width: 80%;
+    margin-bottom: 4vw;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    color: $primary-white;
+    text-align: center; /* 입력 필드 중앙 정렬 */
+
+    ::placeholder {
+      color: #000;
+    }
+  }
+
+  .sign-up-btn .sign-up-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw 2vw;
+    font-size: 3vw;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+
+    .user-icon {
+      margin-right: 2vw;
+      font-size: 5vw;
+    }
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 6vw;
+    background-color: #fff;
+    margin: 0 2vw;
   }
 }
