@@ -1080,18 +1080,20 @@ h4 {
   font-size: 2.5vw; /* 텍스트 크기를 vw 단위로 변경 */
   text-align: center;
 }
-.comming-soon-section .coming-soon-content h2 {
+.comming-soon-section .coming-soon-content h2.comming-soon-title {
+  margin-top: 0;
   font-size: 4vw;
   margin-bottom: 1vw;
   opacity: 0;
   animation: fadeIn 0.8s ease-out 0.8s forwards;
 }
-.comming-soon-section .coming-soon-content p {
+.comming-soon-section .coming-soon-content p.comming-soon-description {
   font-size: 1.5vw;
   margin-top: 1vw;
   opacity: 0;
   animation: fadeIn 0.8s ease-out 0.8s forwards;
   line-height: 1.5;
+  text-align: center;
 }
 
 @keyframes fadeInLogo {

@@ -29,7 +29,8 @@
       </ul>
     </nav>
     <div class="social-buttons">
-      <a href="login.html" class="btn-signin">Sign In</a>
+      <a href="#" class="btn-signin">Sign In</a>
+      
       <a href="https://facebook.com" class="social-btn">
         <img src="../assets/images/facebook-icon.png" alt="Facebook">
       </a>
@@ -46,20 +47,18 @@
   <main>
     <!-- Coming Soon Section with Logo and Text Animation -->
     <section class="comming-soon-section">
-        <div class="coming-soon-content">
+      <div class="coming-soon-content">
 
-        <div class="comming-soon-logo-container">
-            <img src="../assets/images/AAB_logo.png" alt="AAB Logo" class="comming-soon-logo">
-            <span class="comming-soon-logo-text">PICKLEBALL</span>
-        </div>
+      <div class="comming-soon-logo-container">
+          <img src="../assets/images/AAB_logo.png" alt="AAB Logo" class="comming-soon-logo">
+          <span class="comming-soon-logo-text">PICKLEBALL</span>
+      </div>
 
-        <h2>COMING SOON</h2>
-        <p>Exciting updates are on their way.<br>Stay tuned!</p>
-        </div>
+      <h2 class="comming-soon-title">COMING SOON</h2>
+      <p class="comming-soon-description">Exciting updates are on their way.<br>Stay tuned!</p>
+      </div>
     </section>
-        
-        
-    
+
   </main>
 
 
@@ -101,7 +100,25 @@
     
   </footer>
 
+  <!-- Login Modal -->
+  <div id="login-modal" class="login-modal hidden">
+    <div class="login-modal-content">
+      <div id="modal-content-innerbox" class="login-modal-content-innerbox">
+        <h1>STAY IN THE KNOW...</h1>
+        <p>SIGN UP TO BE AMONG THE FIRST TO KNOW ABOUT UPCOMING EVENTS, PROMOTIONS, GIVEAWAYS, NEWS, AND MORE...</p>
   
+        <!-- 이메일 입력 -->
+        <div class="login-email-input">
+          <input type="email" placeholder="Enter Your E-mail">
+          <button class="sign-up-btn">
+            <img src="../assets/images/add-user.png" alt="User icon" class="user-icon">
+            <span class="divider"></span>
+            <h4>SIGN UP</h4>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="../assets/js/main.js"></script>
 </body>

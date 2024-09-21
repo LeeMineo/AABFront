@@ -111,6 +111,7 @@ window.addEventListener('load', function () {
 
 document.addEventListener('DOMContentLoaded', function() {
   const openLoginPopupBtn = document.querySelector('.btn-signin');
+  const openSubscribeImage = document.querySelector('.footer-image-container img');
   const loginModal = document.getElementById('login-modal');
   const closeLoginBtn = document.querySelector('.login-close-btn');
 
@@ -118,6 +119,14 @@ document.addEventListener('DOMContentLoaded', function() {
   if (openLoginPopupBtn) {
     openLoginPopupBtn.addEventListener('click', function(event) {
       event.preventDefault();
+      loginModal.style.display = 'flex'; // 모달을 표시
+    });
+  }
+
+  // 팝업 열기 (이미지 클릭 시)
+  if (openSubscribeImage) {
+    openSubscribeImage.addEventListener('click', function(event) {
+      event.preventDefault(); // 기본 이미지 클릭 동작 방지 (필요 시)
       loginModal.style.display = 'flex'; // 모달을 표시
     });
   }
