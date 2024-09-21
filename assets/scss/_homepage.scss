@@ -20,11 +20,10 @@
   }
 
 /* 섹션 2 - 토너먼트 스타일 */
-/* 섹션 2 - 토너먼트 스타일 */
 .home-tournaments-section {
   background-color: $primary-beige;
   padding: 3vw 5vw;
-
+  position: relative; /* Ensure relative positioning for absolute buttons */
 
   .home-section-title {
     text-align: center;
@@ -37,70 +36,83 @@
     text-transform: uppercase;
   }
 
+  .tournament-list-container {
+    max-height: 35vw;
+    overflow-y: scroll; /* Enable vertical scroll */
+    scroll-behavior: smooth;
+  }
+
+  .tournament-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+  }
+
+  .home-tournament-coming-soon {
+    background-color: $primary-lightbeige;
+    padding: 5vw;
+    text-align: center;
+    font-size: 1.8vw;
+    color: $primary-grey;
+    margin-bottom: 1vw;
+  }
+
+
   .home-tournament-item {
     display: flex;
     align-items: center;
     background-color: $primary-white;
     padding: 1vw;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
-    position: relative; /* 가상 요소 위치를 위한 상대 위치 지정 */
-    z-index: 0; /* 배경을 콘텐츠 뒤로 보내기 */
+    position: relative;
+    z-index: 0;
 
-  
-    &.home-upcoming::before{
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 25.5vw; /* 사다리꼴의 넓이 */
-      height: 100%; /* 부모 높이의 100% */
-     background-color: #FF0000; /* 빨간색 배경 */
-      clip-path: polygon(0 0, 91% 0, 100% 100%, 0 100%); /* 사다리꼴 모양 설정 */
-      z-index: 0; /* 배경 위치 조정 */
-      pointer-events: none; /* 클릭 이벤트 방지 */
-    }
-
+    &.home-upcoming::before,
     &.home-previous::before {
       content: "";
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
-      width: 25.5vw; /* 사다리꼴의 넓이 */
-      height: 100%; /* 부모 높이의 100% */
-     background-color: #D7DE39; /* 빨간색 배경 */
-      clip-path: polygon(0 0, 91% 0, 100% 100%, 0 100%); /* 사다리꼴 모양 설정 */
-      z-index: 0; /* 배경 위치 조정 */
-      pointer-events: none; /* 클릭 이벤트 방지 */
+      width: 25.5vw;
+      height: 100%;
+      clip-path: polygon(0 0, 91% 0, 100% 100%, 0 100%);
+      z-index: 0;
+      pointer-events: none;
     }
-  
-  
+
+    &.home-upcoming::before {
+      background-color: $primary-red;
+    }
+
+    &.home-previous::before {
+      background-color: #D7DE39;
+    }
+
     .home-tournament-logo {
       width: 20vw;
       margin-right: 2vw;
-      z-index: 1; /* 로고가 가상 요소 위에 오도록 설정 */
+      z-index: 1;
       margin-left: 2vw;
     }
-  
+
     .home-tournament-details {
-      z-index: 1; /* 내용이 가상 요소 위에 오도록 설정 */
+      z-index: 1;
       margin-left: 2.5vw;
+
       h3 {
         font-size: 2.2vw;
         margin-bottom: 0;
       }
-  
+
       .home-tournament-name {
         font-size: 4vw;
         color: $primary-red;
         font-weight: bold;
         margin-bottom: 0;
-        border-top: 0;
-        
       }
-  
+
       .home-tournament-location {
         font-size: 1.5vw;
         color: $primary-black;
@@ -109,17 +121,47 @@
       }
     }
   }
-  
 
-  .home-tournament-coming-soon {
-    background-color: $primary-lightbeige;
-    padding: 5vw;
-    text-align: center;
-    font-size: 1.8vw;
-    color: $primary-grey;
-    margin-bottom: 2vw;
+  .toggle-button {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-color: $primary-red; /* Red background */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 2vw;
+    position: relative; /* 부모 요소를 relative로 설정 */
+    margin: 1vw auto; /* Center button horizontally */
+    z-index: 10;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken($primary-red, 10%);
+    }
   }
+
+  .arrow-down, .arrow-up {
+      font-size: 1vw; /* 화살표 크기 */
+      color: white; /* 화살표 색상 */
+      position: absolute; /* 절대 위치 지정 */
+      top: 50%; /* 세로 중앙에 위치 */
+      left: 50%; /* 가로 중앙에 위치 */
+      transform: translate(-50%, -50%); /* 중앙 기준으로 정확하게 위치 고정 */
+      transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  /* 위/아래 버튼 초기 상태 */
+  #toggleUpButton {
+      display: none; /* Initially hidden */
+  }
+
+  #toggleDownButton {
+      display: block; /* Initially visible */
+  }
+
 }
+
 
 
 /* 섹션 3 - 인스타그램 피드 스타일 */
@@ -348,7 +390,7 @@
   background-image: url('../../assets/images/Pickleball_banner.jpg'); /* 배경 이미지 */
   background-size: cover;
   background-position: center;
-  height: 60vh; /* 섹션 높이 */
+  height: 60vw; /* 섹션 높이 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -380,6 +422,27 @@
 
       &:hover {
         background-color: darken(#EF283D, 10%);
+      }
+    }
+  }
+
+   /* 모바일 뷰 스타일 추가 */
+   @media screen and (max-width: 768px) {
+    height: auto; /* 높이 조정 */
+    padding: 20vw 5vw; /* 상단으로 이동하기 위한 패딩 */
+    padding-top: 0;
+    align-items: flex-start; /* 텍스트 상단 정렬 */
+
+    .banner-content {
+      h2 {
+        font-size: 7vw; /* 글씨 크기 크게 조정 */
+        margin-bottom: 5vw; /* 버튼과의 간격을 넓게 */
+        line-height: 1.2; /* 줄 간격 설정 */
+      }
+
+      .banner-button {
+        font-size: 4vw; /* 버튼 크기 조정 */
+        padding: 1.5vw 5vw; /* 버튼 패딩 조정 */
       }
     }
   }
