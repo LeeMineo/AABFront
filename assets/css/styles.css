@@ -79,7 +79,7 @@
   border-radius: 14vw;
 }
 .main-header .social-buttons .btn-signin:hover {
-  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
+  background-color: #f35768;
 }
 .main-header .social-buttons .social-btn {
   display: inline-block;
@@ -97,7 +97,7 @@
   width: 1.4vw;
 }
 .main-header .social-buttons .social-btn:hover {
-  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
+  background-color: #f35768;
 }
 .main-header .social-buttons .social-btn:last-child {
   margin-right: 0;
@@ -258,7 +258,7 @@
   height: 1vw;
 }
 .main-footer .footer-logo-social .social-icons .social-btn:hover {
-  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
+  background-color: #f35768;
 }
 .main-footer .footer-logo-social .btn-login {
   background-color: #EF283D;
@@ -269,7 +269,7 @@
   text-decoration: none;
 }
 .main-footer .footer-logo-social .btn-login:hover {
-  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
+  background-color: #f35768;
 }
 .main-footer .company-info {
   display: flex;
@@ -1676,7 +1676,7 @@ h4 {
   transition: background-color 0.3s ease;
 }
 .pickleball-banner-section .banner-content .banner-button:hover {
-  background-color: rgb(212.2077922078, 15.7922077922, 36.5194805195);
+  background-color: #d41025;
 }
 @media screen and (max-width: 768px) {
   .pickleball-banner-section {
