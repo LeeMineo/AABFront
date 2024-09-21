@@ -71,7 +71,7 @@
   border-radius: 14vw; /* 버튼의 모서리 둥근 정도를 vw로 변경 */
 }
 .main-header .social-buttons .btn-signin:hover {
-  background-color: #f35768;
+  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
 }
 .main-header .social-buttons .social-btn {
   display: inline-block;
@@ -89,7 +89,7 @@
   width: 1.4vw;
 }
 .main-header .social-buttons .social-btn:hover {
-  background-color: #f35768;
+  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
 }
 .main-header .social-buttons .social-btn:last-child {
   margin-right: 0;
@@ -145,7 +145,7 @@
   height: 1vw;
 }
 .main-footer .footer-logo-social .social-icons .social-btn:hover {
-  background-color: #f35768;
+  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
 }
 .main-footer .footer-logo-social .btn-login {
   background-color: #EF283D;
@@ -156,7 +156,7 @@
   text-decoration: none;
 }
 .main-footer .footer-logo-social .btn-login:hover {
-  background-color: #f35768;
+  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
 }
 .main-footer .company-info {
   display: flex;
@@ -518,73 +518,259 @@ h4 {
 }
 .section-2 .section-2-header {
   display: flex;
-  justify-content: center;
+  align-items: center; /* 수직 중앙 정렬 */
   background-color: #EF283D;
-  padding: 1vw 0;
+  padding: 1vw 2vw; /* 좌우 여백 추가 */
+  padding-bottom: 2vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
 }
-.section-2 .section-2-header .tab-link {
-  margin: 0 2vw;
-  font-size: 1.5vw;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 1vw 2vw;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+.section-2 .section-2-header .back-link {
+  color: black; /* 텍스트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-size: 1.3vw; /* 텍스트 크기 */
+  font-weight: bold; /* 텍스트 굵게 */
+  margin-right: auto; /* 왼쪽 정렬 */
+  padding-top: 1vw;
 }
-.section-2 .section-2-header .tab-link:hover, .section-2 .section-2-header .tab-link.active {
-  border-bottom: 2px solid #FFFFFF;
+.section-2 .section-2-header .tabs {
+  display: flex;
+  gap: 2vw; /* 탭 간격 조정 */
+  margin-left: auto; /* 오른쪽 정렬 */
+}
+.section-2 .section-2-header .tabs .tab-link {
+  color: black; /* 탭 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-size: 1.3vw; /* 탭 크기 */
+  padding: 1vw 0; /* 상하 여백만 추가 */
+  border-bottom: 2px solid transparent; /* 기본 하단 선 숨기기 */
+  transition: all 0.3s ease; /* 호버 및 활성화 상태 전환 효과 */
+  display: inline-block; /* 하단 선이 텍스트 길이에 맞도록 설정 */
+  line-height: 1; /* 텍스트와 하단 선의 간격 설정 */
+  padding-bottom: 0;
+}
+.section-2 .section-2-header .tabs .tab-link:hover {
+  border-bottom: 2px solid #FFFFFF; /* 호버 상태 하단 선 */
+  color: white; /* 호버 상태 텍스트 색상 */
+}
+.section-2 .section-2-header .tabs .tab-link.active {
+  border-bottom: 2px solid #FFFFFF; /* 활성화된 탭 하단 선 */
+  color: white; /* 활성화된 탭 텍스트 색상 */
 }
 .section-2 .tab-content {
-  padding: 2vw;
-  background-color: #EDE2CE;
+  background-color: white;
   /* Section 2 - Tab Panels */
   /* Section 2 - 1 (Information) */
   /* Section 2 - 2 (Gallery) */
   /* Section 2 - 3 (Results) */
 }
 .section-2 .tab-content .tab-panel {
-  display: none;
+  visibility: hidden; /* 요소를 보이지 않게 하지만 공간을 차지함 */
+  position: absolute; /* 페이지 레이아웃에 영향을 미치지 않음 */
+  top: 0;
+  left: 0;
 }
 .section-2 .tab-content .tab-panel.active {
-  display: block;
+  visibility: visible; /* 활성화된 패널만 보이도록 설정 */
+  position: static; /* 원래 위치로 돌아감 */
 }
 .section-2 .tab-content .details {
   display: flex;
   justify-content: space-around;
   padding: 2vw 0;
+  padding-top: 2vw;
+  padding-bottom: 3vw;
 }
 .section-2 .tab-content .details .detail-item {
   text-align: center;
 }
 .section-2 .tab-content .details .detail-item span {
   display: block;
-  font-size: 1.2vw;
+  font-size: 2vw;
   margin-bottom: 0.5vw;
   color: #010101;
+  margin-top: 1.5vw;
 }
 .section-2 .tab-content .details .detail-item p {
   font-size: 1.5vw;
-  color: #EF283D;
+  color: #010101;
 }
-.section-2 .tab-content .gallery-images .image-slider {
+.section-2 .tab-content .details .icon {
+  width: 2.5vw; /* 아이콘 크기 */
+  height: 2.5vw; /* 아이콘 크기 */
+}
+.section-2 .tab-content .info_top {
+  padding-top: 2vw;
+  background-color: #EDE2CE;
+  margin: 0%;
+}
+.section-2 .tab-content .info_top2 {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 2.5vw;
+}
+.section-2 .tab-content .info_under {
   display: flex;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
 }
-.section-2 .tab-content .gallery-images .image-slider .slide {
-  min-width: 200px;
-  height: 200px;
-  background-color: #CCCCCC;
-  margin-right: 1vw;
+.section-2 .tab-content .info_under2 {
+  width: 80%;
+}
+.section-2 .tab-content .video {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.section-2 .tab-content .video iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+.section-2 .tab-content .sponsor-section {
+  width: 100%; /* 섹션 전체 너비 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.section-2 .tab-content .line-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* 전체 너비로 설정 */
+  margin: 0; /* 여백 제거 */
+  padding: 0; /* 패딩 제거 */
+}
+.section-2 .tab-content .line {
+  flex: 1; /* 선이 가능한 공간을 모두 차지하도록 설정 */
+  height: 0.1vw;
+  background-color: #000;
+}
+.section-2 .tab-content .line:first-child {
+  margin-right: 10px; /* 첫 번째 선의 오른쪽 간격 */
+}
+.section-2 .tab-content .line:last-child {
+  margin-left: 10px; /* 마지막 선의 왼쪽 간격 */
+}
+.section-2 .tab-content .sponsor-text {
+  font-size: 1.6vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0 20px; /* 텍스트 좌우 간격 */
+}
+.section-2 .tab-content .main-sponsor {
+  padding: 3vw 5vw;
+  background-color: #F6F2E6;
+  padding: 5vw;
+  text-align: center;
+  font-size: 1.8vw;
+  color: #7A7A74;
+  margin-bottom: 2vw;
+}
+.section-2 .tab-content .partners {
+  padding: 3vw 5vw;
+  background-color: #F6F2E6;
+  padding: 5vw;
+  text-align: center;
+  font-size: 1.8vw;
+  color: #7A7A74;
+  margin-bottom: 4vw;
+}
+.section-2 .tab-content .gallery-section {
+  padding: 2vw 5vw;
+  padding-bottom: 5vw;
+  background-color: white;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+.section-2 .tab-content .caro-container {
+  position: relative;
+  width: 100%;
+}
+.section-2 .tab-content .caro {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+}
+.section-2 .tab-content .gallery-card {
+  min-width: 20% !important;
+  box-sizing: border-box;
+  padding: 0 0.5vw;
+  margin-bottom: 3vw;
+}
+.section-2 .tab-content .gallery-card img {
+  width: 100%;
+  height: 23vw;
+  padding: 0; /* 패딩 제거 */
+  margin: 0; /* 마진 제거 */
+  display: block;
+}
+.section-2 .tab-content .prevB, .section-2 .tab-content .nextB {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #EF283D; /* 버튼 색상 */
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5vw;
+  font-size: 2vw;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+.section-2 .tab-content .prevB {
+  left: -4vw;
+}
+.section-2 .tab-content .nextB {
+  right: -4vw;
+}
+.section-2 .tab-content .gallery_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-2 .tab-content .gallery-text {
+  font-size: 6vw;
+  margin-top: 4vw;
+  margin-bottom: 1vw;
 }
 .section-2 .tab-content .btn-download {
-  display: inline-block;
-  padding: 1vw 2vw;
+  display: inline-flex; /* 텍스트와 아이콘을 수평 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  padding: 0.3vw 3vw;
   background-color: #EF283D;
   color: #FFFFFF;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 2vw;
-  font-size: 1.5vw;
+  border-radius: 50px;
+  margin-top: 3.5vw;
+  margin-bottom: 6vw;
+  font-size: 1.8vw;
+}
+.section-2 .tab-content .btn-download .icon {
+  width: 1em; /* 아이콘 크기 */
+  height: 1em; /* 아이콘 크기 */
+  margin-left: 0.5vw; /* 아이콘과 텍스트 사이의 간격 */
+}
+.section-2 .tab-content .result_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-2 .tab-content .result-text {
+  font-size: 6vw;
+  margin-top: 4vw;
 }
 
 /* 섹션 1 - 동영상 */
@@ -855,7 +1041,7 @@ h4 {
   transition: background-color 0.3s ease;
 }
 .pickleball-banner-section .banner-content .banner-button:hover {
-  background-color: #d41025;
+  background-color: rgb(212.2077922078, 15.7922077922, 36.5194805195);
 }
 
 .comming-soon-section {
