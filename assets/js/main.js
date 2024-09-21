@@ -72,3 +72,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
+
+//토너먼트페이지 2-2 gallery 카드 넘김 기능 구현
+window.addEventListener('load', function () {
+  const prevB = document.querySelector('.prevB');
+  const nextB = document.querySelector('.nextB');
+  const caro = document.querySelector('.caro');
+  const cardWidth = document.querySelector('.gallery-card').offsetWidth; // 카드 한 개의 너비 계산
+  console.log(cardWidth);
+
+  
+    let scrollAmount = 0;
+
+    nextB.addEventListener('click', () => {
+      const maxScrollLeft = caro.scrollWidth - caro.clientWidth;
+      if (scrollAmount < maxScrollLeft) {
+        scrollAmount += cardWidth; // 카드 한 개 너비만큼 이동
+        caro.scrollTo({
+          left: scrollAmount,
+          behavior: 'smooth',
+        });
+      }
+    });
+
+    prevB.addEventListener('click', () => {
+      if (scrollAmount > 0) {
+        scrollAmount -= cardWidth; // 카드 한 개 너비만큼 이동
+        caro.scrollTo({
+          left: scrollAmount,
+          behavior: 'smooth',
+        });
+      }
+    });
+
+});
