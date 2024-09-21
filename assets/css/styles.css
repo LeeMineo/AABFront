@@ -79,7 +79,7 @@
   border-radius: 14vw;
 }
 .main-header .social-buttons .btn-signin:hover {
-  background-color: #f35768;
+  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
 }
 .main-header .social-buttons .social-btn {
   display: inline-block;
@@ -97,7 +97,7 @@
   width: 1.4vw;
 }
 .main-header .social-buttons .social-btn:hover {
-  background-color: #f35768;
+  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
 }
 .main-header .social-buttons .social-btn:last-child {
   margin-right: 0;
@@ -258,7 +258,7 @@
   height: 1vw;
 }
 .main-footer .footer-logo-social .social-icons .social-btn:hover {
-  background-color: #f35768;
+  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
 }
 .main-footer .footer-logo-social .btn-login {
   background-color: #EF283D;
@@ -269,7 +269,7 @@
   text-decoration: none;
 }
 .main-footer .footer-logo-social .btn-login:hover {
-  background-color: #f35768;
+  background-color: rgb(242.5324675325, 87.4675324675, 103.8311688312);
 }
 .main-footer .company-info {
   display: flex;
@@ -776,6 +776,9 @@ h4 {
   border-bottom: 2px solid #FFFFFF; /* 활성화된 탭 하단 선 */
   color: white; /* 활성화된 탭 텍스트 색상 */
 }
+.section-2 .section-2-header-mobile {
+  display: none;
+}
 .section-2 .tab-content {
   background-color: white;
   /* Section 2 - Tab Panels */
@@ -818,6 +821,9 @@ h4 {
   width: 2.5vw; /* 아이콘 크기 */
   height: 2.5vw; /* 아이콘 크기 */
 }
+.section-2 .tab-content .detail-item-mobile {
+  display: none;
+}
 .section-2 .tab-content .info_top {
   padding-top: 2vw;
   background-color: #EDE2CE;
@@ -834,6 +840,9 @@ h4 {
   align-items: center;
 }
 .section-2 .tab-content .info_under2 {
+  width: 80%;
+}
+.section-2 .tab-content .info_under2_video {
   width: 80%;
 }
 .section-2 .tab-content .video {
@@ -963,6 +972,9 @@ h4 {
   margin-top: 4vw;
   margin-bottom: 1vw;
 }
+.section-2 .tab-content .gallery-text-moblie {
+  display: none;
+}
 .section-2 .tab-content .btn-download {
   display: inline-flex; /* 텍스트와 아이콘을 수평 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
@@ -991,7 +1003,305 @@ h4 {
   font-size: 6vw;
   margin-top: 4vw;
 }
+.section-2 .tab-content .result-text-mobile {
+  display: none;
+}
 
+@media (max-width: 768px) {
+  .section-2-header {
+    display: none !important; /*; /* 작은 화면에서 숨기기 */
+  }
+  .tab-content {
+    display: flex !important; /* 플렉스박스 사용 */
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+    margin-top: 2vw; /* 상단 여백 추가 */
+  }
+  .tab-content .tab-panel {
+    visibility: visible !important; /* 모든 패널이 보이도록 설정 */
+    position: static !important; /* 페이지 레이아웃에 영향 미치도록 설정 */
+    margin-bottom: 2vw; /* 패널 사이 여백 추가 */
+  }
+  .section-2-header-mobile {
+    display: flex !important;
+    align-items: center !important; /* 수직 중앙 정렬 */
+    justify-content: center;
+    background-color: #EF283D;
+    padding: 1vw 2vw; /* 좌우 여백 추가 */
+    padding-bottom: 2vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    color: white;
+    font-size: 7vw !important;
+  }
+  /* Section 2 - Content */
+  .tab-content {
+    background-color: white;
+    margin-top: 0 !important;
+    /* Section 2 - Tab Panels */
+    /* Section 2 - 1 (Information) */
+    /* Section 2 - 2 (Gallery) */
+    /* Section 2 - 3 (Results) */
+  }
+  .tab-content .tab-panel {
+    visibility: hidden; /* 요소를 보이지 않게 하지만 공간을 차지함 */
+    position: absolute; /* 페이지 레이아웃에 영향을 미치지 않음 */
+    top: 0;
+    left: 0;
+  }
+  .tab-content .tab-panel.active {
+    padding: 0;
+    width: 100%;
+  }
+  .tab-content .details {
+    display: flex; /* 플렉스박스 사용 */
+    flex-direction: column; /* 세로 정렬로 변경 */
+    align-items: left; /* 가운데 정렬 */
+    text-align: left; /* 텍스트 가운데 정렬 */
+    gap: 2vw; /* 각 항목 간 간격 추가 */
+    margin-left: 20%;
+  }
+  .tab-content .details .detail-item {
+    text-align: left !important;
+    display: flex;
+  }
+  .tab-content .details .detail-item span {
+    display: block;
+    font-size: 5vw !important;
+    margin-bottom: 0.5vw;
+    color: #010101;
+    margin-top: 1.5vw;
+  }
+  .tab-content .details .detail-item p {
+    font-size: 4vw !important;
+    color: #010101;
+  }
+  .tab-content .details .icon {
+    width: 9vw !important; /* 아이콘 크기 */
+    height: 9vw !important; /* 아이콘 크기 */
+    margin-right: 2vw;
+    margin-top: 2.5vw;
+  }
+  .tab-content .detail-item-under {
+    display: flex; /* 플렉스박스 사용 */
+    flex-direction: column; /* 세로 정렬로 변경 */
+    align-items: left !important; /* 가운데 정렬 */
+    margin-left: 6vw;
+    margin-top: 0;
+  }
+  .tab-content .info_under2 {
+    width: 80% !important;
+  }
+  .tab-content .info_under2_video {
+    width: 100% !important;
+  }
+  .tab-content .video {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+    padding-top: 0 !important;
+  }
+  .tab-content .video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    max-width: 100%;
+    height: auto;
+    border: none;
+  }
+  .tab-content .sponsor-section {
+    width: 100%; /* 섹션 전체 너비 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .tab-content .line-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* 전체 너비로 설정 */
+    margin: 0; /* 여백 제거 */
+    padding: 0; /* 패딩 제거 */
+  }
+  .tab-content .line {
+    flex: 1; /* 선이 가능한 공간을 모두 차지하도록 설정 */
+    height: 0.1vw;
+    background-color: #000;
+  }
+  .tab-content .line:first-child {
+    margin-right: 10px; /* 첫 번째 선의 오른쪽 간격 */
+  }
+  .tab-content .line:last-child {
+    margin-left: 10px; /* 마지막 선의 왼쪽 간격 */
+  }
+  .tab-content .sponsor-text {
+    font-size: 5vw !important;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0 20px; /* 텍스트 좌우 간격 */
+  }
+  .tab-content .main-sponsor {
+    padding: 3vw 5vw;
+    padding: 5vw;
+    text-align: center;
+    font-size: 1.8vw;
+    color: #7A7A74;
+    margin-bottom: 2vw;
+  }
+  .tab-content .partners {
+    padding: 3vw 5vw;
+    padding: 5vw;
+    text-align: center;
+    font-size: 1.8vw;
+    color: #7A7A74;
+    margin-bottom: 4vw;
+  }
+  .tab-content .detail-item-mobile {
+    display: flex !important;
+  }
+  .tab-content .detail-item-web {
+    display: none;
+  }
+  .tab-content .gallery-section {
+    padding: 2vw 5vw;
+    padding-bottom: 5vw;
+    background-color: black !important;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .tab-content .caro-container {
+    position: relative;
+    width: 100%;
+  }
+  .tab-content .caro {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .tab-content .gallery-card {
+    min-width: 20% !important;
+    box-sizing: border-box;
+    padding: 0 0.5vw;
+    margin-bottom: 3vw;
+  }
+  .tab-content .gallery-card img {
+    width: 100%;
+    height: 23vw;
+    padding: 0; /* 패딩 제거 */
+    margin: 0; /* 마진 제거 */
+    display: block;
+  }
+  .tab-content .gallery_center {
+    background-color: black;
+  }
+  .tab-content .gallery-text-moblie {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 6vw;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+    color: white;
+  }
+  .tab-content .gallery-text {
+    display: none;
+  }
+  .tab-content .btn-download {
+    display: inline-flex; /* 텍스트와 아이콘을 수평 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    padding: 0.3vw 3vw;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 3.5vw;
+    margin-bottom: 6vw;
+    font-size: 2vw !important;
+    width: 19vw;
+  }
+  .tab-content .btn-download .icon {
+    width: 1em; /* 아이콘 크기 */
+    height: 1em; /* 아이콘 크기 */
+    margin-left: 0.5vw; /* 아이콘과 텍스트 사이의 간격 */
+  }
+  .tab-content .result-text {
+    display: none;
+  }
+  .tab-content .result-text-mobile {
+    font-size: 6vw;
+    margin-top: 4vw;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #EF283D;
+  }
+  /* 섹션 1 - 토너먼트 소개 */
+  .tournament-section {
+    background-color: #010101;
+    color: #FFFFFF;
+    position: relative;
+    padding-bottom: 10vw;
+  }
+  .tournament-section .tournament-logo-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .tournament-section .tournament-logo {
+    justify-content: center;
+    width: 70vw;
+    padding-top: 7vw;
+    padding-bottom: 7vw;
+    padding-right: 0;
+  }
+  .tournament-section .tournament-content {
+    bottom: 30vw;
+    left: 2vw;
+    padding: 2vw;
+    padding-top: 0;
+    margin: 0;
+  }
+  .tournament-section .tournament-content .tournament-info {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tournament-section .tournament-content .tournament-info h3 {
+    font-size: 6vw;
+  }
+  .tournament-section .tournament-content .tournament-info h1 {
+    font-size: 9vw;
+  }
+  .tournament-section .tournament-content .tournament-info p {
+    font-size: 4vw;
+    margin-bottom: 4vw;
+  }
+  .tournament-section .tournament-content .tournament-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5vw;
+    margin-bottom: 1vw;
+  }
+  .tournament-section .tournament-content .tournament-buttons .btn {
+    padding: 0;
+    font-size: 3vw;
+    display: flex; /* 플렉스박스 사용 */
+    justify-content: center; /* 텍스트 수평 중앙 정렬 */
+    align-items: center; /* 텍스트 수직 중앙 정렬 */
+    width: 60vw; /* 버튼의 고정 너비 */
+    height: 5vw; /* 버튼의 고정 높이 */
+    line-height: 50px; /* 텍스트의 세로 정렬 */
+  }
+}
 /* 섹션 1 - 동영상 */
 .home-video-section {
   text-align: center;
@@ -1366,7 +1676,7 @@ h4 {
   transition: background-color 0.3s ease;
 }
 .pickleball-banner-section .banner-content .banner-button:hover {
-  background-color: #d41025;
+  background-color: rgb(212.2077922078, 15.7922077922, 36.5194805195);
 }
 @media screen and (max-width: 768px) {
   .pickleball-banner-section {
