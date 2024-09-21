@@ -17,8 +17,7 @@ https://aab-front.vercel.app/
 이 프로젝트는 **assets** 폴더에 이미지, 폰트, JavaScript, CSS 파일을 저장하며, **pages** 폴더에 각각의 HTML 페이지를 관리합니다. 또한, **scss** 폴더에 스타일 관련 파일들을 나누어 관리합니다. 아래는 디렉토리 구조입니다:
 
 ```csharp
-csharp
-코드 복사
+
 assets/
     css/        - 컴파일된 CSS 파일들
     fonts/      - 폰트 파일들 (커스텀 및 외부 폰트)
@@ -26,7 +25,7 @@ assets/
     js/
         main.js - 웹사이트 상호작용을 처리하는 JavaScript 파일
     scss/
-        _commingsoon.scss       - "Coming Soon" 페이지 스타일
+        _commingsoon.scss       - "Coming Soon" 섹션 스타일
         _footer.scss            - 푸터 스타일
         _header.scss            - 헤더 스타일
         _homepage.scss          - 홈페이지 스타일
@@ -38,11 +37,11 @@ assets/
         main.scss               - 모든 SCSS 파일을 포함하는 메인 스타일 파일
 
 pages/
-    contacts.html    - 연락처 페이지
-    event.html       - 이벤트 상세 페이지
+    contacts.html    - 연락처 페이지 (미완)
+    event.html       - 이벤트 상세 페이지 (미완)
     homepage.html    - 홈페이지
-    media.html       - 미디어 페이지
-    news.html        - 뉴스 페이지
+    media.html       - 미디어 페이지 (미완)
+    news.html        - 뉴스 페이지 (미완)
     tournaments.html - 토너먼트 목록 페이지
 
 README.md            - 프로젝트 개요 및 설명
@@ -120,28 +119,9 @@ vercel.json          - Vercel 배포 설정 파일
     cd aab-front
     ```
     
-3. 의존성을 설치합니다 (사용하는 패키지가 있다면):
     
-    ```bash
-    bash
-    코드 복사
-    npm install
-    ```
-    
-4. SCSS를 컴파일합니다 (SCSS 전처리기를 사용하는 경우):
-    
-    ```bash
-    bash
-    코드 복사
-    npm run build-css
-    ```
-    
-5. `homepage.html` 파일을 브라우저에서 열어 로컬에서 사이트를 확인할 수 있습니다.
+3. `homepage.html` 파일을 브라우저에서 열어 로컬에서 사이트를 확인할 수 있습니다.
 
 ---
 
-## 라이선스
 
-이 프로젝트는 MIT 라이선스에 따라 배포됩니다. 자세한 내용은 LICENSE 파일을 참고하세요.
-
----
