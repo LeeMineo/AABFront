@@ -593,21 +593,6 @@ h4 {
     align-items: center; /* 내부 요소 중앙 정렬 */
   }
   /* 닫기 버튼 */
-  .login-close-btn {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #FFFFFF;
-    cursor: pointer;
-    z-index: 1100;
-  }
-  .login-close-btn:hover {
-    color: #ffcc00;
-  }
   h1 {
     font-size: 10vw; /* 제목 크기 키움 */
     margin-bottom: 4vw;
