@@ -97,4 +97,12 @@
         }
     }
 
+
   }
+
+  /* 미디어 쿼리를 사용해 모바일 버전에서 푸터 숨기기 */
+@media screen and (max-width: 768px) {
+  .main-footer {
+    display: none;
+  }
+}

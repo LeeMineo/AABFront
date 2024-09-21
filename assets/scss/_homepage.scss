@@ -390,7 +390,7 @@
   background-image: url('../../assets/images/Pickleball_banner.jpg'); /* 배경 이미지 */
   background-size: cover;
   background-position: center;
-  height: 60vh; /* 섹션 높이 */
+  height: 60vw; /* 섹션 높이 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -422,6 +422,27 @@
 
       &:hover {
         background-color: darken(#EF283D, 10%);
+      }
+    }
+  }
+
+   /* 모바일 뷰 스타일 추가 */
+   @media screen and (max-width: 768px) {
+    height: auto; /* 높이 조정 */
+    padding: 20vw 5vw; /* 상단으로 이동하기 위한 패딩 */
+    padding-top: 0;
+    align-items: flex-start; /* 텍스트 상단 정렬 */
+
+    .banner-content {
+      h2 {
+        font-size: 7vw; /* 글씨 크기 크게 조정 */
+        margin-bottom: 5vw; /* 버튼과의 간격을 넓게 */
+        line-height: 1.2; /* 줄 간격 설정 */
+      }
+
+      .banner-button {
+        font-size: 4vw; /* 버튼 크기 조정 */
+        padding: 1.5vw 5vw; /* 버튼 패딩 조정 */
       }
     }
   }
