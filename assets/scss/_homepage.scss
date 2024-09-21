@@ -20,70 +20,107 @@
   }
 
 /* 섹션 2 - 토너먼트 스타일 */
+/* 섹션 2 - 토너먼트 스타일 */
 .home-tournaments-section {
-    background-color: $primary-beige;
-    padding: 3vw 5vw;
+  background-color: $primary-beige;
+  padding: 3vw 5vw;
+
+
+  .home-section-title {
+    text-align: center;
+    font-size: 2vw;
+    color: $primary-black;
+    margin-bottom: 2vw;
+    background-color: $primary-black;
+    color: $primary-white;
+    padding: 1vw;
+    text-transform: uppercase;
+  }
+
+  .home-tournament-item {
+    display: flex;
+    align-items: center;
+    background-color: $primary-white;
+    padding: 1vw;
+    margin-bottom: 2vw;
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+    position: relative; /* 가상 요소 위치를 위한 상대 위치 지정 */
+    z-index: 0; /* 배경을 콘텐츠 뒤로 보내기 */
+
   
-    .home-section-title {
-      text-align: center;
-      font-size: 2vw;
-      color: $primary-black;
-      margin-bottom: 2vw;
-      background-color: $primary-black;
-      color: $primary-white;
-      padding: 1vw;
-      text-transform: uppercase;
+    &.home-upcoming::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 25.5vw; /* 사다리꼴의 넓이 */
+      height: 100%; /* 부모 높이의 100% */
+     background-color: #FF0000; /* 빨간색 배경 */
+      clip-path: polygon(0 0, 91% 0, 100% 100%, 0 100%); /* 사다리꼴 모양 설정 */
+      z-index: 0; /* 배경 위치 조정 */
+      pointer-events: none; /* 클릭 이벤트 방지 */
+    }
+
+    &.home-previous::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 25.5vw; /* 사다리꼴의 넓이 */
+      height: 100%; /* 부모 높이의 100% */
+     background-color: #D7DE39; /* 빨간색 배경 */
+      clip-path: polygon(0 0, 91% 0, 100% 100%, 0 100%); /* 사다리꼴 모양 설정 */
+      z-index: 0; /* 배경 위치 조정 */
+      pointer-events: none; /* 클릭 이벤트 방지 */
     }
   
-    .home-tournament-item {
-      display: flex;
-      align-items: center;
-      background-color: $primary-white;
-      padding: 2vw;
-      margin-bottom: 2vw;
-      box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
-      
-      &.home-upcoming {
-        border-left: 5px solid $primary-red;
-      }
   
-      &.home-previous {
-        border-left: 5px solid $primary-yellow;
-      }
-  
-      .home-tournament-logo {
-        width: 15vw;
-        margin-right: 2vw;
-      }
-  
-      .home-tournament-details {
-        h3 {
-          font-size: 1.5vw;
-          margin-bottom: 1vw;
-        }
-  
-        .home-tournament-name {
-          font-size: 2vw;
-          color: $primary-red;
-          font-weight: bold;
-        }
-  
-        .home-tournament-location {
-          font-size: 1.2vw;
-          color: $primary-black;
-        }
-      }
+    .home-tournament-logo {
+      width: 20vw;
+      margin-right: 2vw;
+      z-index: 1; /* 로고가 가상 요소 위에 오도록 설정 */
+      margin-left: 2vw;
     }
   
-    .home-tournament-coming-soon {
-      background-color: $primary-lightbeige;
-      padding: 5vw;
-      text-align: center;
-      font-size: 1.8vw;
-      color: $primary-grey;
-      margin-bottom: 2vw;
+    .home-tournament-details {
+      z-index: 1; /* 내용이 가상 요소 위에 오도록 설정 */
+      margin-left: 2.5vw;
+      h3 {
+        font-size: 2.2vw;
+        margin-bottom: 0;
+      }
+  
+      .home-tournament-name {
+        font-size: 4vw;
+        color: $primary-red;
+        font-weight: bold;
+        margin-bottom: 0;
+        border-top: 0;
+        
+      }
+  
+      .home-tournament-location {
+        font-size: 1.5vw;
+        color: $primary-black;
+        margin-top: 0;
+        margin-bottom: 2vw;
+      }
     }
+  }
+  
+
+  .home-tournament-coming-soon {
+    background-color: $primary-lightbeige;
+    padding: 5vw;
+    text-align: center;
+    font-size: 1.8vw;
+    color: $primary-grey;
+    margin-bottom: 2vw;
+  }
 }
+
 
 /* 섹션 3 - 인스타그램 피드 스타일 */
 .instagram-section {
@@ -112,7 +149,7 @@
 }
 
 .account-name {
-  font-size: 2.5vw;
+  font-size: 2.3vw;
   font-weight: bold;
   font-family: 'Arial', sans-serif; /* 다른 폰트로 변경 가능 */
 }
