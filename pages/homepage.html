@@ -62,10 +62,18 @@
       </div>
     </section>
 
-    <!-- 섹션 2 - 토너먼트 정보 -->
-    <section class="home-tournaments-section">
-      <h2 class="home-section-title">Upcoming Tournaments</h2>
+<!-- 섹션 2 - 토너먼트 정보 -->
+<section class="home-tournaments-section">
+  <h2 class="home-section-title">Upcoming Tournaments</h2>
 
+    <!-- Up Arrow Button -->
+    <button id="toggleUpButton" class="toggle-button">
+      <span class="arrow-up">&#9650;</span>
+    </button>
+
+  <div class="tournament-list-container">
+    <div class="tournament-list" id="tournamentList">
+      
       <div class="home-tournament-item home-upcoming">
         <img src="../assets/images/SeoulOpen_black.png" alt="Seoul Open Logo" class="home-tournament-logo">
         <div class="home-tournament-details">
@@ -79,17 +87,28 @@
         <p>COMING SOON IN 2025</p>
       </div>
 
-      <h2 class="home-section-title">Previous Tournaments</h2>
-
-      <div class="home-tournament-item home-previous">
-        <img src="../assets/images/PSO_black_logo.png" alt="Pickleball Seoul Open Logo" class="home-tournament-logo">
-        <div class="home-tournament-details">
-          <h3>October 26-29, 2023</h3>
-          <p class="home-tournament-name">PICKLEBALL SEOUL OPEN</p>
-          <p class="home-tournament-location">AAB Park @ Banyan Tree Club and Spa Seoul</p>
-        </div>
+      <div class="home-tournament-coming-soon">
+        <p>COMING SOON IN 2025</p>
       </div>
-    </section>
+    </div>
+  </div>
+
+  <!-- Down Arrow Button -->
+  <button id="toggleDownButton" class="toggle-button">
+    <span class="arrow-down">&#9660;</span>
+  </button>
+
+  <h2 class="home-section-title">Previous Tournaments</h2>
+
+  <div class="home-tournament-item home-previous">
+    <img src="../assets/images/PSO_black_logo.png" alt="Pickleball Seoul Open Logo" class="home-tournament-logo">
+    <div class="home-tournament-details">
+      <h3>October 26-29, 2023</h3>
+      <p class="home-tournament-name">PICKLEBALL SEOUL OPEN</p>
+      <p class="home-tournament-location">AAB Park @ Banyan Tree Club and Spa Seoul</p>
+    </div>
+  </div>
+</section>
 
     <!-- 섹션 3 - Instagram 썸네일 피드 -->
     <section class="instagram-section">

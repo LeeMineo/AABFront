@@ -207,3 +207,46 @@ document.addEventListener('DOMContentLoaded', function() {
     navContainer.classList.toggle('active');
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tournamentListContainer = document.querySelector('.tournament-list-container');
+  const toggleUpButton = document.getElementById("toggleUpButton");
+  const toggleDownButton = document.getElementById("toggleDownButton");
+
+  // 스크롤 다운 버튼 클릭
+  toggleDownButton.addEventListener("click", function () {
+    tournamentListContainer.scrollBy({
+      top: 150, // Amount to scroll down
+      behavior: "smooth"
+    });
+  });
+
+  // 스크롤 업 버튼 클릭
+  toggleUpButton.addEventListener("click", function () {
+    tournamentListContainer.scrollBy({
+      top: -150, // Amount to scroll up
+      behavior: "smooth"
+    });
+  });
+
+  // 스크롤 이벤트
+  tournamentListContainer.addEventListener('scroll', function () {
+    const scrollTop = tournamentListContainer.scrollTop;
+    const scrollHeight = tournamentListContainer.scrollHeight;
+    const clientHeight = tournamentListContainer.clientHeight;
+
+    // 스크롤이 끝에 도달했을 때 Down 버튼 숨기기
+    if (Math.ceil(scrollTop + clientHeight) >= scrollHeight) {
+      toggleDownButton.style.display = "none";
+    } else {
+      toggleDownButton.style.display = "block";
+    }
+
+    // 스크롤이 상단을 벗어났을 때 Up 버튼 보이기
+    if (scrollTop > 0) {
+      toggleUpButton.style.display = "block";
+    } else {
+      toggleUpButton.style.display = "none";
+    }
+  });
+});
