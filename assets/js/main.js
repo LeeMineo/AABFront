@@ -115,6 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const loginModal = document.getElementById('login-modal');
   const closeLoginBtn = document.querySelector('.login-close-btn');
 
+  // 페이지 로드 시 모달이 기본적으로 숨겨진 상태로 시작
+  loginModal.style.display = 'none'; // 혹시 보이는 경우 강제로 숨김
+
   // 팝업 열기
   if (openLoginPopupBtn) {
     openLoginPopupBtn.addEventListener('click', function(event) {
