@@ -37,7 +37,7 @@
   }
 
   .tournament-list-container {
-    max-height: 35vw;
+    max-height: 40vw;
     overflow-y: scroll; /* Enable vertical scroll */
     scroll-behavior: smooth;
   }
@@ -50,7 +50,7 @@
 
   .home-tournament-coming-soon {
     background-color: $primary-lightbeige;
-    padding: 5vw;
+    padding: 6vw;
     text-align: center;
     font-size: 1.8vw;
     color: $primary-grey;
@@ -152,11 +152,11 @@
   }
 
   /* 위/아래 버튼 초기 상태 */
-  #toggleUpButton {
-      display: none; /* Initially hidden */
+  #upcomingToggleDownButton {
+      display: block; /* Initially hidden */
   }
 
-  #toggleDownButton {
+  #previousToggleDownButton {
       display: block; /* Initially visible */
   }
 

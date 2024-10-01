@@ -67,16 +67,11 @@
 
 <!-- 섹션 2 - 토너먼트 정보 -->
 <section class="home-tournaments-section">
+
+  <!--Upcoming Tournaments -->
   <h2 class="home-section-title">Upcoming Tournaments</h2>
-
-    <!-- Up Arrow Button -->
-    <button id="toggleUpButton" class="toggle-button">
-      <span class="arrow-up">&#9650;</span>
-    </button>
-
-  <div class="tournament-list-container">
+  <div class="tournament-list-container" id="upcomingTournamentListContainer">
     <div class="tournament-list" id="tournamentList">
-
       <div class="home-tournament-item home-upcoming">
         <img src="../assets/images/SeoulOpen_black.png" alt="Seoul Open Logo" class="home-tournament-logo">
         <div class="home-tournament-details">
@@ -97,20 +92,39 @@
   </div>
 
   <!-- Down Arrow Button -->
-  <button id="toggleDownButton" class="toggle-button">
+  <button id="upcomingToggleDownButton" class="toggle-button">
     <span class="arrow-down">&#9660;</span>
   </button>
 
+  <!--Previous Tournaments -->
   <h2 class="home-section-title">Previous Tournaments</h2>
 
-  <div class="home-tournament-item home-previous">
-    <img src="../assets/images/PSO_black_logo.png" alt="Pickleball Seoul Open Logo" class="home-tournament-logo">
-    <div class="home-tournament-details">
-      <h3>October 26-29, 2023</h3>
-      <p class="home-tournament-name">PICKLEBALL SEOUL OPEN</p>
-      <p class="home-tournament-location">AAB Park @ Banyan Tree Club and Spa Seoul</p>
+  <div class="tournament-list-container" id="previousTournamentListContainer">
+    <div class="tournament-list" id="previousTournamentList">
+      <div class="home-tournament-item home-previous">
+        <img src="../assets/images/PSO_black_logo.png" alt="Pickleball Seoul Open Logo" class="home-tournament-logo">
+        <div class="home-tournament-details">
+          <h3>October 26-29, 2023</h3>
+          <p class="home-tournament-name">PICKLEBALL SEOUL OPEN</p>
+          <p class="home-tournament-location">AAB Park @ Banyan Tree Club and Spa Seoul</p>
+        </div>
+      </div>
+
+      <div class="home-tournament-coming-soon">
+        <p>COMING SOON IN 2025</p>
+      </div>
+
+      <div class="home-tournament-coming-soon">
+        <p>COMING SOON IN 2025</p>
+      </div>
     </div>
   </div>
+
+  <!-- Down Arrow Button -->
+  <button id="previousToggleDownButton" class="toggle-button">
+    <span class="arrow-down">&#9660;</span>
+  </button>
+
 </section>
 
     <!-- 섹션 3 - Instagram 썸네일 피드 -->

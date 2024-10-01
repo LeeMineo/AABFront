@@ -181,44 +181,80 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* 스크롤 관련 */
 document.addEventListener("DOMContentLoaded", function () {
-  const tournamentListContainer = document.querySelector('.tournament-list-container');
-  const toggleUpButton = document.getElementById("toggleUpButton");
-  const toggleDownButton = document.getElementById("toggleDownButton");
+  const upcomingTournamentListContainer = document.getElementById('upcomingTournamentListContainer');
+  const previousTournamentListContainer = document.getElementById('previousTournamentListContainer');
+  
+  const upcomingToggleDownButton = document.getElementById("upcomingToggleDownButton");
+  const previousToggleDownButton = document.getElementById("previousToggleDownButton");
 
-  // 스크롤 다운 버튼 클릭
-  toggleDownButton.addEventListener("click", function () {
-    tournamentListContainer.scrollBy({
-      top: 150, // Amount to scroll down
-      behavior: "smooth"
+  let autoScrollInterval;
+  let isAutoScrolling = true;
+
+  // 자동 스크롤 함수
+  function startAutoScroll(container) {
+    return setInterval(() => {
+      container.scrollBy({
+        top: 300, // 한번에 스크롤할 픽셀 양
+        behavior: 'smooth'
+      });
+
+      // 스크롤이 맨 끝에 도달했는지 확인하고, 도달하면 다시 위로 이동
+      if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
+        container.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    }, 2000); // 2초마다 스크롤
+  }
+
+  // 자동 스크롤 시작
+  let upcomingAutoScroll = startAutoScroll(upcomingTournamentListContainer);
+  let previousAutoScroll = startAutoScroll(previousTournamentListContainer);
+
+  // 사용자가 스크롤할 때 자동 스크롤을 중단하는 이벤트 리스너
+  function addManualScrollListener(container, autoScrollVariable) {
+    container.addEventListener('scroll', function () {
+      clearInterval(autoScrollVariable);
+      isAutoScrolling = false;
+
+      // 사용자가 스크롤을 중단하면 일정 시간 후 자동 스크롤 재개
+      setTimeout(() => {
+        if (!isAutoScrolling) {
+          autoScrollVariable = startAutoScroll(container);
+          isAutoScrolling = true;
+        }
+      }, 3000); // 3초 후 자동 스크롤 재개
     });
-  });
+  }
 
-  // 스크롤 업 버튼 클릭
-  toggleUpButton.addEventListener("click", function () {
-    tournamentListContainer.scrollBy({
-      top: -150, // Amount to scroll up
-      behavior: "smooth"
+  // 수동 스크롤 이벤트 리스너 추가
+  addManualScrollListener(upcomingTournamentListContainer, upcomingAutoScroll);
+  addManualScrollListener(previousTournamentListContainer, previousAutoScroll);
+
+  // 수동으로 아래로 스크롤 버튼 클릭 시
+  function addButtonScrollListener(button, container, autoScrollVariable) {
+    button.addEventListener("click", function () {
+      container.scrollBy({
+        top: 300, // 수동 스크롤할 양
+        behavior: 'smooth'
+      });
+
+      // 버튼 클릭 시에도 자동 스크롤 중단
+      clearInterval(autoScrollVariable);
+      isAutoScrolling = false;
+
+      // 3초 후 자동 스크롤 재개
+      setTimeout(() => {
+        if (!isAutoScrolling) {
+          autoScrollVariable = startAutoScroll(container);
+          isAutoScrolling = true;
+        }
+      }, 3000);
     });
-  });
+  }
 
-  // 스크롤 이벤트
-  tournamentListContainer.addEventListener('scroll', function () {
-    const scrollTop = tournamentListContainer.scrollTop;
-    const scrollHeight = tournamentListContainer.scrollHeight;
-    const clientHeight = tournamentListContainer.clientHeight;
-
-    // 스크롤이 끝에 도달했을 때 Down 버튼 숨기기
-    if (Math.ceil(scrollTop + clientHeight) >= scrollHeight) {
-      toggleDownButton.style.display = "none";
-    } else {
-      toggleDownButton.style.display = "block";
-    }
-
-    // 스크롤이 상단을 벗어났을 때 Up 버튼 보이기
-    if (scrollTop > 0) {
-      toggleUpButton.style.display = "block";
-    } else {
-      toggleUpButton.style.display = "none";
-    }
-  });
+  // 버튼 이벤트 리스너 추가
+  addButtonScrollListener(upcomingToggleDownButton, upcomingTournamentListContainer, upcomingAutoScroll);
+  addButtonScrollListener(previousToggleDownButton, previousTournamentListContainer, previousAutoScroll);
 });

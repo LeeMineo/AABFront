@@ -1287,7 +1287,7 @@
   text-transform: uppercase;
 }
 .home-tournaments-section .tournament-list-container {
-  max-height: 35vw;
+  max-height: 40vw;
   overflow-y: scroll; /* Enable vertical scroll */
   scroll-behavior: smooth;
 }
@@ -1298,7 +1298,7 @@
 }
 .home-tournaments-section .home-tournament-coming-soon {
   background-color: #F6F2E6;
-  padding: 5vw;
+  padding: 6vw;
   text-align: center;
   font-size: 1.8vw;
   color: #7A7A74;
@@ -1384,10 +1384,10 @@
   transform: translate(-50%, -50%); /* 중앙 기준으로 정확하게 위치 고정 */
   transition: transform 0.3s ease, color 0.3s ease;
 }
-.home-tournaments-section #toggleUpButton {
-  display: none; /* Initially hidden */
+.home-tournaments-section #upcomingToggleDownButton {
+  display: block; /* Initially hidden */
 }
-.home-tournaments-section #toggleDownButton {
+.home-tournaments-section #previousToggleDownButton {
   display: block; /* Initially visible */
 }
 
