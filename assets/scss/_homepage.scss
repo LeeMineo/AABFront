@@ -308,10 +308,11 @@
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margin to eliminate the gap */
     display: block;
+    object-fit: cover; /* 이미지가 찌그러지지 않고 자르도록 설정 */
   }
     
   .news-card h3 {
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     margin: 0;
     padding: 1vw;
     padding-bottom: 0;
@@ -322,6 +323,8 @@
     
   .news-card p {
     font-size: 1vw;
+    padding-top: 0;
+    margin-top: 0;
     padding: 1vw;
     text-align: left;
     color: $primary-black; /* 기본 링크 색상을 검정으로 설정 */

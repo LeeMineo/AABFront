@@ -889,6 +889,7 @@
   padding: 0; /* 패딩 제거 */
   margin: 0; /* 마진 제거 */
   display: block;
+  object-fit: cover; /* 이미지가 찌그러지지 않고 자르도록 설정 */
 }
 .section-2 .tab-content .prevB, .section-2 .tab-content .nextB {
   position: absolute;
@@ -1525,9 +1526,10 @@
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margin to eliminate the gap */
   display: block;
+  object-fit: cover; /* 이미지가 찌그러지지 않고 자르도록 설정 */
 }
 .news-section .news-card h3 {
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   margin: 0;
   padding: 1vw;
   padding-bottom: 0;
@@ -1537,6 +1539,8 @@
 }
 .news-section .news-card p {
   font-size: 1vw;
+  padding-top: 0;
+  margin-top: 0;
   padding: 1vw;
   text-align: left;
   color: #010101; /* 기본 링크 색상을 검정으로 설정 */
@@ -1739,8 +1743,19 @@
     margin-top: 2vh;
   }
 }
+@font-face {
+  font-family: "AppleSDGothicNeo";
+  src: url("../assets/fonts/AppleSDGothicNeo.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .special-char {
   font-family: "Bebas Neue", sans-serif;
+}
+
+.special-char-thin {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
 }
 
 .special-char-lighter {
@@ -1764,6 +1779,14 @@
 
 .dash-symbol {
   font-family: "Bebas Neue", sans-serif;
+}
+
+.at-symbol-apple {
+  font-family: "AppleSDGothicNeo", sans-serif;
+}
+
+.dash-symbol-apple {
+  font-family: "AppleSDGothicNeo", sans-serif;
 }
 
 /*

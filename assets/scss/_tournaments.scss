@@ -348,6 +348,7 @@
       padding: 0; /* 패딩 제거 */
       margin: 0; /* 마진 제거 */
       display: block;
+      object-fit: cover; /* 이미지가 찌그러지지 않고 자르도록 설정 */
     }
 
     .prevB, .nextB {
