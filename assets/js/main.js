@@ -108,6 +108,20 @@ window.addEventListener('load', function () {
 
 });
 
+/* 모바일 햄버거 버튼 기능 */
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggleBtn = document.querySelector('.menu-toggle');
+  const navContainer = document.querySelector('.nav-container');
+
+  // 메뉴 열기/닫기 토글 기능 추가
+  menuToggleBtn.addEventListener('click', function () {
+    navContainer.classList.toggle('active'); // 클래스 토글로 메뉴를 보이거나 숨김
+    menuToggleBtn.classList.toggle('active'); // 햄버거 아이콘 모양도 변경
+  });
+});
+
+
+
 /* 모달 관련 */
 document.addEventListener('DOMContentLoaded', function () {
   const loginModal = document.getElementById('login-modal');
