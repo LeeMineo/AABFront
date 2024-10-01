@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const closeLoginBtn = document.querySelector('.login-close-btn');
   const openSubscribeImage = document.querySelector('.footer-image-container img'); // 이미지 선택
   const openBannerButton = document.querySelector('.banner-button'); // 배너 버튼 선택
+  const openLoginBtn = document.querySelector('.btn-login'); // Log In 버튼 선택
 
   // 팝업 열기 - 로그인 모달 (Sign In 버튼 클릭 시)
   if (openLoginPopupBtn) {
@@ -148,6 +149,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // 팝업 열기 - 로그인 모달 (배너 버튼 클릭 시)
   if (openBannerButton) {
     openBannerButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      loginModal.style.display = 'flex'; // 로그인 모달을 표시
+      kakaoModal.style.display = 'none'; // 카카오 모달을 숨김
+    });
+  }
+
+  // 팝업 열기 - 로그인 모달 (Log In 버튼 클릭 시)
+  if (openLoginBtn) {
+    openLoginBtn.addEventListener('click', function (event) {
       event.preventDefault();
       loginModal.style.display = 'flex'; // 로그인 모달을 표시
       kakaoModal.style.display = 'none'; // 카카오 모달을 숨김
