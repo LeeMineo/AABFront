@@ -23,12 +23,6 @@
   height: 4.5vw;
   margin-bottom: 0.1vw;
 }
-.main-header .logo-container .logo-text {
-  color: #EF283D;
-  font-size: 1vw;
-  font-weight: bold;
-  text-align: center;
-}
 .main-header .menu-toggle {
   display: none;
 }
@@ -228,12 +222,6 @@
 .main-footer .footer-logo-container .footer-logo {
   height: 6.5vw; /* 로고의 높이를 vw로 변경 */
   margin-bottom: 0.1vw; /* 로고와 텍스트 사이의 간격을 vw로 변경 */
-}
-.main-footer .footer-logo-container .footer-logo-text {
-  color: #EF283D;
-  font-size: 1.5vw; /* 텍스트 크기를 vw 단위로 변경 */
-  font-weight: bold;
-  text-align: center;
 }
 .main-footer .footer-logo-social {
   margin-top: 1vw;
